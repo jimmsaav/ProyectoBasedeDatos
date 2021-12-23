@@ -1,3 +1,5 @@
+PRAGMA foreign_keys = ON;
+
 .headers on
 .mode column
 
@@ -7,7 +9,7 @@ create table Usuario (
   apellido varchar(50) not null,
   direccion varchar(60) not null,
   ciudad varchar(40) not null,
-  moderador integer not null,
+  moderador integer default NULL,
   es_moderador binary not null,  
   --No se puede en replit con boolean 
   primary key (idUsuario), 
@@ -68,15 +70,15 @@ create table USUARIO_BLOQUEADO(
 );
 
 
-insert into  Usuario values (15468, 'El pepe', 'Potaxio', 'The dodo', 'Yo y los papus', 11488, 1);
+insert into  Usuario values (15468, 'El pepe', 'Potaxio', 'The dodo', 'Yo y los papus', NULL, 1);
 
-insert into  Usuario values (15368, 'Ete sech', 'Potaxio remix', ':3', 'UwU', 11888, 0);
+insert into  Usuario values (15368, 'Ete sech', 'Potaxio remix', ':3', 'UwU', 15468, 0);
 
-insert into  Usuario values (16868, 'Momasos', 'Eso tilin', 'Requisitos para ser mi duo', 'umu', 11888, 0);
+insert into  Usuario values (16868, 'Momasos', 'Eso tilin', 'Requisitos para ser mi duo', 'umu', 15468, 0);
 
-insert into  Usuario values (19968, 'Cualquier cosa', 'Pan de pascua', 'hola', 'xd', 11888, 0);
+insert into  Usuario values (19968, 'Cualquier cosa', 'Pan de pascua', 'hola', 'xd', 15468, 0);
 
-insert into  Usuario values (19967, 'POU 2', 'gorila aplastar ciudad ataque prisión escapa juego', 'Artefacta', 'Creditos economicos', 11888, 0);
+insert into  Usuario values (19967, 'POU 2', 'gorila aplastar ciudad ataque prisión escapa juego', 'Artefacta', 'Creditos economicos', 15468, 0);
 
 
 INSERT INTO MENSAJE VALUES 
@@ -86,17 +88,17 @@ INSERT INTO MENSAJE VALUES
 (5007, '4-04-2021', 'Arte de meme', null,'RE: Checa el meme', 15368, 16868),
 (5008, '15-11-2021', 'Pandemiaa acabate porfavor', null, 'Pascuas we', 19968, 15468);
 
-insert into Amistad values(1010, 1011, 1012, '3-04-2021', 'Enviado' );
-insert into Amistad values(1013, 1014, 1015, '23-11-2021', 'Enviado' );
-insert into Amistad values(1016, 1017, 1018, '26-02-2021', 'Aceptado' );
-insert into Amistad values(1019, 1020, 1021, '28-07-2021', 'Aceptado' );
-insert into Amistad values(1022, 1023, 1024, '12-03-2021', 'Aceptado' );
+insert into Amistad values(1010, 15468, 15368, '3-04-2021', 'Enviado' );
+insert into Amistad values(1013, 15368, 16868, '23-11-2021', 'Enviado' );
+insert into Amistad values(1016, 16868, 19968, '26-02-2021', 'Aceptado' );
+insert into Amistad values(1019, 19968, 19967, '28-07-2021', 'Aceptado' );
+insert into Amistad values(1022, 19967, 15468, '12-03-2021', 'Aceptado' );
 
-insert into USUARIO_BLOQUEADO values (1200, 1010, 2020);
-insert into USUARIO_BLOQUEADO values (1300, 1013, 2021);
-insert into USUARIO_BLOQUEADO values (1400, 1016, 2022);
-insert into USUARIO_BLOQUEADO values (1500, 1019, 2023);
-insert into USUARIO_BLOQUEADO values (1600, 1022, 2024);
+insert into USUARIO_BLOQUEADO values (1200, 15468, 15368);
+insert into USUARIO_BLOQUEADO values (1300, 15368, 19967);
+insert into USUARIO_BLOQUEADO values (1400, 19967, 15468);
+insert into USUARIO_BLOQUEADO values (1500, 15468, 19967);
+insert into USUARIO_BLOQUEADO values (1600, 19967, 15368);
 
 select * from Usuario;
 .print "\n"
