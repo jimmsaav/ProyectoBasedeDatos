@@ -1,9 +1,14 @@
 
-insert into  Usuario values (15468, 'El pepe', 'Potaxio', 'The dodo', 'Yo y los papus', NULL, 1);
-insert into  Usuario values (15368, 'Ete sech', 'Potaxio remix', ':3', 'UwU', 15468, 0);
-insert into  Usuario values (16868, 'Momasos', 'Eso tilin', 'Requisitos para ser mi duo', 'umu', 15468, 0);
-insert into  Usuario values (19968, 'Cualquier cosa', 'Pan de pascua', 'hola', 'xd', 15468, 0);
-insert into  Usuario values (19967, 'POU 2', 'gorila aplastar ciudad ataque prisión escapa juego', 'Artefacta', 'Creditos economicos', 15468, 0);
+insert into  Usuario values (15468, 'Pedro', 'Zambrano', 'Alborada', 'Guayaquil', NULL, true);
+insert into  Usuario values (15368, 'Juan', 'Hidalgo', 'Ciudad del rio', 'Guayaquil', 15468, false);
+insert into  Usuario values (16868, 'Carlos', 'Franco', 'Mucho lote', 'Guayaquil', 15468, false);
+insert into  Usuario values (19968, 'Francisco', 'Sven', 'La Joya', 'Guayaquil', 15468, false);
+insert into  Usuario values (19970, 'Luis', 'Jimenez', 'Metropolis', 'Guayaquil', 15468, false);
+insert into  Usuario values (19971, 'Elbert', 'Yturralde', 'Vista al Rio', 'Cuenca', 15468, false);
+insert into  Usuario values (19972, 'Pedro', 'Asturias', 'Los Sigsales', 'Cuenca', 15468, false);
+insert into  Usuario values (19973, 'Jaime', 'Morales', 'San Blas', 'Cuenca', 15468, false);
+insert into  Usuario values (19974, 'Angelica', 'Lopez', 'Jardines de la Sierra', 'Cuenca', 15468, false);
+
 
 INSERT INTO MENSAJE VALUES 
 (5004, '3-04-2021', 'Hola que pex', null, 'Saludos', 15468, 15368),
