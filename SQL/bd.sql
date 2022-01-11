@@ -96,7 +96,7 @@ create table Sitio(
   sala_virtual boolean not null, 
   idActividad int not null, 
   link varchar(220), 
-  plataforma varchar(100)
+  plataforma varchar(100),
   primary key(idSitio), 
   foreign key(idListaHorarioAtencion) references ListaHorarioAtencion(idListaHorarioAtencion),
   foreign key(idActividad) references actividad(idActividad)
