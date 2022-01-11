@@ -78,3 +78,11 @@ create table actividad (
 	primary key(idActividad)
 );
 
+create table HorarioAtencion (
+	idHorario int not null auto_increment,
+	horaApertura date not null,
+	horaCierre date not null,
+	idListaHorarioAtencion int not null,
+	primary key(idHorario),
+	foreign key(idListaHorarioAtencion) references ListaHorarioAtencion(idListaHorarioAtencion)
+);
