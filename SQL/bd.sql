@@ -86,3 +86,19 @@ create table HorarioAtencion (
 	primary key(idHorario),
 	foreign key(idListaHorarioAtencion) references ListaHorarioAtencion(idListaHorarioAtencion)
 );
+
+create table Sitio(
+  idSitio int not null auto_increment,
+  nombre varchar(100) not null,
+  direccion varchar(100) not null,
+  numero_contacto varchar(100) not null,
+  idListaHorarioAtencion int not null,
+  sala_virtual boolean not null, 
+  idActividad int not null, 
+  link varchar(220), 
+  plataforma varchar(100)
+  primary key(idSitio), 
+  foreign key(idListaHorarioAtencion) references ListaHorarioAtencion(idListaHorarioAtencion),
+  foreign key(idActividad) references actividad(idActividad)
+	 
+);
