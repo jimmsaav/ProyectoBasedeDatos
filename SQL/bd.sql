@@ -26,6 +26,7 @@ CREATE TABLE MENSAJE (
   FOREIGN KEY (idReceptor) REFERENCES USUARIO(idUsuario),
   FOREIGN KEY (idEmisor) REFERENCES USUARIO(idUsuario)
 );
+
 create table Asistencia (
   idAsistencia int not null auto_increment,
   fecha_asistencia date not null,

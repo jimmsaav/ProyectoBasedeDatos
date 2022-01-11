@@ -1,23 +1,23 @@
 insert into  Usuario values (1, 'Pedro', 'Zambrano', 'Alborada', 'Guayaquil', NULL, true);
-insert into  Usuario values (2, 'Juan', 'Hidalgo', 'Ciudad del rio', 'Guayaquil', 15468, false);
-insert into  Usuario values (3, 'Carlos', 'Franco', 'Mucho lote', 'Guayaquil', 15468, false);
-insert into  Usuario values (4, 'Francisco', 'Sven', 'La Joya', 'Guayaquil', 15468, false);
-insert into  Usuario values (5, 'Luis', 'Jimenez', 'Metropolis', 'Guayaquil', 15468, false);
-insert into  Usuario values (6, 'Elbert', 'Yturralde', 'Vista al Rio', 'Cuenca', 15468, false);
-insert into  Usuario values (7, 'Pedro', 'Asturias', 'Los Sigsales', 'Cuenca', 15468, false);
-insert into  Usuario values (8, 'Jaime', 'Morales', 'San Blas', 'Cuenca', 15468, false);
-insert into  Usuario values (9, 'Angelica', 'Lopez', 'Jardines de la Sierra', 'Cuenca', 15468, false);
-insert into  Usuario values (10, 'Andrea', 'Castro', 'Los Sigsales', 'Cuenca', 15468, false);
-insert into  Usuario values (11, 'Sofia', 'Montero', 'San Blas', 'Cuenca', 15468, false);
-insert into  Usuario values (12, 'Francisco', 'Cruz', 'Ciudadela La Paz', 'Guayaquil', 15468, false);
-insert into  Usuario values (13, 'Ernesto', 'Andrade', 'Samanes 5', 'Guayaquil', 15468, false);
-insert into  Usuario values (14, 'Luis', 'Lisboa', 'Parque Historico', 'Guayaquil', 15468, false);
-insert into  Usuario values (15, 'Emilio', 'Vera', 'Metropolis 2', 'Guayaquil', 15468, false);
-insert into  Usuario values (16, 'Pedro', 'Martinez', 'Los Sigsales', 'Cuenca', 15468, false);
-insert into  Usuario values (17, 'Jaime', 'Barroso', 'San Blas', 'Cuenca', 15468, false);
-insert into  Usuario values (18, 'Luisa', 'Lopez', 'Jardines de la Sierra', 'Cuenca', 15468, false);
-insert into  Usuario values (19, 'Isabela', 'Castro', 'Los Sigsales', 'Cuenca', 15468, false);
-insert into  Usuario values (20, 'Kiara', 'Montero', 'San Blas', 'Cuenca', 15468, false);
+insert into  Usuario values (2, 'Juan', 'Hidalgo', 'Ciudad del rio', 'Guayaquil', 1, false);
+insert into  Usuario values (3, 'Carlos', 'Lopez', 'Mucho lote', 'Guayaquil', 1, false);
+insert into  Usuario values (4, 'Francisco', 'Sven', 'La Joya', 'Guayaquil', 1, false);
+insert into  Usuario values (5, 'Luis', 'Jimenez', 'Metropolis', 'Guayaquil', 1, false);
+insert into  Usuario values (6, 'Elbert', 'Yturralde', 'Vista al Rio', 'Cuenca', NULL, false);
+insert into  Usuario values (7, 'Pedro', 'Lopez', 'Los Sigsales', 'Cuenca', 6, false);
+insert into  Usuario values (8, 'Jaime', 'Morales', 'San Blas', 'Cuenca', 6, false);
+insert into  Usuario values (9, 'Angelica', 'Lopez', 'Jardines de la Sierra', 'Cuenca', 6, false);
+insert into  Usuario values (10, 'Andrea', 'Castro', 'Los Sigsales', 'Cuenca', 6, false);
+insert into  Usuario values (11, 'Sofia', 'Montero', 'San Blas', 'Cuenca', 6, false);
+insert into  Usuario values (12, 'Francisco', 'Cruz', 'Ciudadela La Paz', 'Guayaquil', 1, false);
+insert into  Usuario values (13, 'Ernesto', 'Andrade', 'Samanes 5', 'Guayaquil', 1, false);
+insert into  Usuario values (14, 'Luis', 'Lopez', 'Parque Historico', 'Guayaquil', 1, false);
+insert into  Usuario values (15, 'Emilio', 'Vera', 'Metropolis 2', 'Guayaquil', 1, false);
+insert into  Usuario values (16, 'Pedro', 'Martinez', 'Los Sigsales', 'Cuenca', 6, false);
+insert into  Usuario values (17, 'Jaime', 'Barroso', 'San Blas', 'Cuenca', 6, false);
+insert into  Usuario values (18, 'Luisa', 'Lopez', 'Jardines de la Sierra', 'Cuenca', 6, false);
+insert into  Usuario values (19, 'Isabela', 'Castro', 'Los Sigsales', 'Cuenca', 6, false);
+insert into  Usuario values (20, 'Kiara', 'Montero', 'San Blas', 'Cuenca', 6, false);
 
 INSERT INTO MENSAJE VALUES 
 (1, '2021-04-03 13:25:45', 'Encontre un lugar bastante interesante en Guayaquil', null, 'Propuesta de viaje', 17, 16),
