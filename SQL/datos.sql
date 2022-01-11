@@ -147,5 +147,27 @@ insert into actividad values(18, 'UNO', 'Varios', 8, 'Cartas uno');
 insert into actividad values(19, 'Monopolio', 'Varios', 8, 'Jugar monopolio');
 insert into actividad values(20, 'XD', 'Socializar', 8, 'Hablar y reir');
 
+insert into ListaHorarioAtencion values(1, 1);
+insert into ListaHorarioAtencion values(2, 2);
+insert into ListaHorarioAtencion values(3, 3);
+insert into ListaHorarioAtencion values(4, 4);
+insert into ListaHorarioAtencion values(5, 5);
+insert into ListaHorarioAtencion values(6, 6);
+insert into ListaHorarioAtencion values(7, 7);
+insert into ListaHorarioAtencion values(8, 8);
+insert into ListaHorarioAtencion values(9, 9);
+insert into ListaHorarioAtencion values(11, 11);
+insert into ListaHorarioAtencion values(12, 12);
+insert into ListaHorarioAtencion values(13, 13);
+insert into ListaHorarioAtencion values(14, 14);
+insert into ListaHorarioAtencion values(15, 15);
+insert into ListaHorarioAtencion values(16, 16);
+insert into ListaHorarioAtencion values(17, 17);
+insert into ListaHorarioAtencion values(18, 18);
+insert into ListaHorarioAtencion values(19, 19);
+insert into ListaHorarioAtencion values(20, 20);
+insert into ListaHorarioAtencion values(10, 10);
+
+
 
 
