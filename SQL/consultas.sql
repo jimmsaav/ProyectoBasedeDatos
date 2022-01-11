@@ -1,13 +1,30 @@
 use tliving;
-select * from actividad;
-select * from amistad;
-select * from asistencia;
-select * from horarioatencion;
-select * from listahorarioatencion;
-select * from mensaje;
-select * from sitio;
-select * from usuario;
-select * from usuario_bloqueado;
+select * from actividad
+where idActividad = 1;
+
+select * from amistad
+where idAmistad = 2;
+
+select * from asistencia
+where idAsistencia = 3;
+
+select * from horarioatencion
+where idHorario = 4;
+
+select * from listahorarioatencion
+where idListaHorarioAtencion = 5;
+
+select * from mensaje
+where idMensaje = 6;
+
+select * from sitio
+where idSitio = 7;
+
+select * from usuario 
+where idUsuario = 8;
+
+select * from usuario_bloqueado
+where id_bloqueo = 9;
 --------------------------------
 select * from actividad
 where tipo = 'Deporte';
