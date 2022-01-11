@@ -60,15 +60,21 @@ create table USUARIO_BLOQUEADO(
   references Usuario(idUsuario)
 );
 
-create table Sitio(
-  idSitio int not null auto_increment,
-  nombre varchar(100) not null, 
-  direccion varchar(200) not null,
-  numero_contacto varchar(100) not null, 
-  idListaHorarioAtencion int not null, 
-  sala_virtual boolean not null, 
-  idActividad int not null, 
-  link varchar(200) not null, 
-  plataforma varchar(22)
+CREATE TABLE ListaHorarioAtencion (
+	idListaHorarioAtencion int not null auto_increment,
+	idSitio int not null, 
+	primary key(idListaHorarioAtencion),
+	foreign key(idSitio) references Sitio(idSitio)
+);
+
+
+
+create table actividad (
+	idActividad int not null auto_increment,
+	nombre varchar (80) not null,
+	tipo varchar (50) not null,
+	cantidad_participantes int not null,
+	descripcion varchar(100) not null,
+	primary key(idActividad)
 );
 
