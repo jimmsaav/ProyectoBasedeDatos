@@ -3,7 +3,7 @@ CREATE SCHEMA tliving;
 USE tliving;
 
 create table Usuario (
-  idUsuario int not null,
+  idUsuario int not null auto_increment,
   nombre varchar(50) not null,
   apellido varchar(50) not null,
   direccion varchar(60) not null,
@@ -15,10 +15,10 @@ create table Usuario (
 );
 
 CREATE TABLE MENSAJE (
-  idMensaje INT not NULL,
-  fecha DATE not NULL,
+  idMensaje INT not NULL auto_increment,
+  fecha datetime not NULL,
   contenido varchar(1000) not NULL,
-  adjunto varchar(1000),
+  adjunto json,
   asunto varchar(50) NOT NULL,
   idReceptor INT NOT NULL,
   idEmisor INT NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE MENSAJE (
   FOREIGN KEY (idEmisor) REFERENCES USUARIO(idUsuario)
 );
 create table Asistencia (
-  idAsistencia int not null,
+  idAsistencia int not null auto_increment,
   fecha_asistencia date not null,
   idUsuario int not null,
   idSitio int not null,
@@ -37,7 +37,7 @@ create table Asistencia (
 );
 
 create table Amistad(
-  idAmistad int not null,
+  idAmistad int not null auto_increment,
   idUsuario1 int not null,
   idUsuario2 int not null,
   fecha_envio_amistad date not null, 
@@ -50,7 +50,7 @@ create table Amistad(
 );
 
 create table USUARIO_BLOQUEADO(
-  id_bloqueo int not null,
+  id_bloqueo int not null auto_increment,
   idUsuarioBloquea int not null,
   idUsuarioBloqueado int not null,
   primary key(id_bloqueo),
