@@ -85,27 +85,6 @@ insert into USUARIO_BLOQUEADO values (19, 20, 3);
 insert into USUARIO_BLOQUEADO values (20, 20, 4);
 
 
-insert into Asistencia values(1, '2021-02-26', 1, 1);
-insert into Asistencia values(2, '2020-03-26', 2, 2);
-insert into Asistencia values(3, '2021-02-26', 3, 3);
-insert into Asistencia values(4, '2021-02-26', 4, 4);
-insert into Asistencia values(5, '2021-02-26', 5, 5);
-insert into Asistencia values(6, '2021-02-26', 6, 6);
-insert into Asistencia values(7, '2021-02-26', 7, 7);
-insert into Asistencia values(8, '2021-02-26', 8, 8);
-insert into Asistencia values(9, '2021-02-26', 9, 9);
-insert into Asistencia values(10, '2021-02-26', 10, 10);
-insert into Asistencia values(11, '2021-02-26', 11, 11);
-insert into Asistencia values(12, '2021-02-26', 12, 12);
-insert into Asistencia values(13, '2021-02-26', 13, 13);
-insert into Asistencia values(14, '2021-02-26', 14, 14);
-insert into Asistencia values(15, '2021-02-26', 15, 15);
-insert into Asistencia values(16, '2021-02-26', 16, 16);
-insert into Asistencia values(17, '2021-02-26', 17, 17);
-insert into Asistencia values(18, '2021-02-26', 18, 18);
-insert into Asistencia values(19, '2021-02-26', 19, 19);
-insert into Asistencia values(20, '2021-02-26', 20, 20);
-
 insert into actividad values(01, 'Caminar', 'Deporte', 8, 'Caminata suave en parque');
 insert into actividad values(02, 'Bailar', 'Socializar', 8, 'Baile en mi casa');
 insert into actividad values(03, 'Futbol', 'Deporte', 8, 'Futbol cerca del parque, hay una cancha');
@@ -170,7 +149,6 @@ insert into ListaHorarioAtencion values(20, 20);
 insert into ListaHorarioAtencion values(10, 10);
 
 
-
 insert into HorarioAtencion values(1,'2021-04-09 13:25:45','2021-04-09 16:25:45', 1);
 insert into HorarioAtencion values(2, '2021-05-10 09:25:45','2021-05-10 12:25:45', 2);
 insert into HorarioAtencion values(3, '2021-06-11 12:25:45','2021-04-09 18:25:45', 3);
@@ -191,3 +169,24 @@ insert into HorarioAtencion values(17, '2021-06-28 13:25:45','2021-06-28 16:25:4
 insert into HorarioAtencion values(18, '2021-08-20 13:25:45','2021-08-20 16:25:45', 18);
 insert into HorarioAtencion values(19, '2021-09-11 13:25:45','2021-09-11 16:25:45', 19);
 insert into HorarioAtencion values(20, '2021-09-11 13:25:45','2021-09-11 16:25:45', 20);
+
+insert into Asistencia values(1, '2021-02-26', 1, 1);
+insert into Asistencia values(2, '2020-03-26', 2, 2);
+insert into Asistencia values(3, '2021-02-26', 3, 3);
+insert into Asistencia values(4, '2021-02-26', 4, 4);
+insert into Asistencia values(5, '2021-02-26', 5, 5);
+insert into Asistencia values(6, '2021-02-26', 6, 6);
+insert into Asistencia values(7, '2021-02-26', 7, 7);
+insert into Asistencia values(8, '2021-02-26', 8, 8);
+insert into Asistencia values(9, '2021-02-26', 9, 9);
+insert into Asistencia values(10, '2021-02-26', 10, 10);
+insert into Asistencia values(11, '2021-02-26', 11, 11);
+insert into Asistencia values(12, '2021-02-26', 12, 12);
+insert into Asistencia values(13, '2021-02-26', 13, 13);
+insert into Asistencia values(14, '2021-02-26', 14, 14);
+insert into Asistencia values(15, '2021-02-26', 15, 15);
+insert into Asistencia values(16, '2021-02-26', 16, 16);
+insert into Asistencia values(17, '2021-02-26', 17, 17);
+insert into Asistencia values(18, '2021-02-26', 18, 18);
+insert into Asistencia values(19, '2021-02-26', 19, 19);
+insert into Asistencia values(20, '2021-02-26', 20, 20);
