@@ -25,7 +25,6 @@ CREATE TABLE MENSAJE (
   FOREIGN KEY (idReceptor) REFERENCES USUARIO(idUsuario),
   FOREIGN KEY (idEmisor) REFERENCES USUARIO(idUsuario)
 );
-
 create table Asistencia (
   idAsistencia int not null auto_increment,
   fecha_asistencia date not null,
@@ -76,7 +75,7 @@ create table Sitio(
   numero_contacto varchar(100) not null,
   sala_virtual boolean not null, 
   idActividad int not null, 
-  link varchar(220), 
+  link varchar(500), 
   plataforma varchar(100),
   primary key (idSitio), 
   foreign key(idActividad) references actividad(idActividad)
@@ -92,11 +91,10 @@ CREATE TABLE ListaHorarioAtencion (
 
 create table HorarioAtencion (
 	idHorario int not null auto_increment,
-	horaApertura date not null,
-	horaCierre date not null,
+	horaApertura datetime not null,
+	horaCierre datetime not null,
 	idListaHorarioAtencion int not null,
 	primary key(idHorario),
 	foreign key(idListaHorarioAtencion) references ListaHorarioAtencion(idListaHorarioAtencion)
 );
-
 
