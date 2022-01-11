@@ -1,7 +1,6 @@
 DROP SCHEMA IF EXISTS tliving;
 CREATE SCHEMA tliving;
 USE tliving;
-
 create table Usuario (
   idUsuario int not null auto_increment,
   nombre varchar(50) not null,
@@ -60,15 +59,6 @@ create table USUARIO_BLOQUEADO(
   references Usuario(idUsuario)
 );
 
-CREATE TABLE ListaHorarioAtencion (
-	idListaHorarioAtencion int not null auto_increment,
-	idSitio int not null, 
-	primary key(idListaHorarioAtencion),
-	foreign key(idSitio) references Sitio(idSitio)
-);
-
-
-
 create table actividad (
 	idActividad int not null auto_increment,
 	nombre varchar (80) not null,
@@ -77,6 +67,27 @@ create table actividad (
 	descripcion varchar(100) not null,
 	primary key(idActividad)
 );
+
+create table Sitio(
+  idSitio int not null auto_increment,
+  nombre varchar(100) not null,
+  direccion varchar(100) not null,
+  numero_contacto varchar(100) not null,
+  sala_virtual boolean not null, 
+  idActividad int not null, 
+  link varchar(220), 
+  plataforma varchar(100),
+  primary key (idSitio), 
+  foreign key(idActividad) references actividad(idActividad)
+	 
+);
+CREATE TABLE ListaHorarioAtencion (
+	idListaHorarioAtencion int not null auto_increment,
+	idSitio int not null, 
+	primary key(idListaHorarioAtencion),
+	foreign key(idSitio) references Sitio(idSitio)
+);
+
 
 create table HorarioAtencion (
 	idHorario int not null auto_increment,
@@ -87,18 +98,4 @@ create table HorarioAtencion (
 	foreign key(idListaHorarioAtencion) references ListaHorarioAtencion(idListaHorarioAtencion)
 );
 
-create table Sitio(
-  idSitio int not null auto_increment,
-  nombre varchar(100) not null,
-  direccion varchar(100) not null,
-  numero_contacto varchar(100) not null,
-  idListaHorarioAtencion int not null,
-  sala_virtual boolean not null, 
-  idActividad int not null, 
-  link varchar(220), 
-  plataforma varchar(100),
-  primary key(idSitio), 
-  foreign key(idListaHorarioAtencion) references ListaHorarioAtencion(idListaHorarioAtencion),
-  foreign key(idActividad) references actividad(idActividad)
-	 
-);
+
