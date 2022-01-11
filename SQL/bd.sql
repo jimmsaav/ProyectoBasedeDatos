@@ -71,3 +71,4 @@ create table Sitio(
   link varchar(200) not null, 
   plataforma varchar(22)
 );
+
