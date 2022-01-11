@@ -59,3 +59,15 @@ create table USUARIO_BLOQUEADO(
   foreign key (idUsuarioBloqueado)
   references Usuario(idUsuario)
 );
+
+create table Sitio(
+  idSitio int not null auto_increment,
+  nombre varchar(100) not null, 
+  direccion varchar(200) not null,
+  numero_contacto varchar(100) not null, 
+  idListaHorarioAtencion int not null, 
+  sala_virtual boolean not null, 
+  idActividad int not null, 
+  link varchar(200) not null, 
+  plataforma varchar(22)
+);
