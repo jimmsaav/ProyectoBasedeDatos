@@ -125,3 +125,27 @@ insert into Sitio values(17, 'City mall', 'Junior 4ta etapa', '0994599999', 1, 1
 insert into Sitio values(18, 'Alborada norte', 'ALborada 14va', '0919999999', 0, 18, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
 insert into Sitio values(19, 'Centro sur', 'Centro entre aurora y emilio', '0996599999', 1, 19, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
 insert into Sitio values(20, 'Noroeste', 'Noroeste 2', '0999993579', 0, 20, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+
+
+insert into actividad values(01, 'Caminar', 'Deporte', 8, 'Caminata suave en parque');
+insert into actividad values(02, 'Bailar', 'Socializar', 8, 'Baile en mi casa');
+insert into actividad values(03, 'Futbol', 'Deporte', 8, 'Futbol cerca del parque, hay una cancha');
+insert into actividad values(04, 'Basquetball', 'Deporte', 8, 'Jugar en cancha');
+insert into actividad values(05, 'Natacion', 'Deporte', 8, 'Nadar en mi casa');
+insert into actividad values(06, 'Cafe y hablar', 'Socializar', 8, 'Caminata suave en parque');
+insert into actividad values(08, 'Trotar', 'Deporte', 8, 'Trotar suave en parque');
+insert into actividad values(09, 'Bingo', 'Negocios', 8, 'Bingo millonario');
+insert into actividad values(10, 'Caminar', 'Deporte', 8, 'Caminata suave en parque');
+insert into actividad values(11, 'Cafe y hablar', 'Socializar', 8, 'Caminata suave en parque');
+insert into actividad values(12, 'Tennis', 'Deporte', 8, 'Tennis en el patio de la casa');
+insert into actividad values(13, 'Caminar', 'Deporte', 8, 'Caminata suave en parque');
+insert into actividad values(14, 'Ajedrez', 'Deporte', 8, 'Ajedrez en mesa del parque');
+insert into actividad values(15, 'Pin Pon', 'Deporte', 8, 'Pin Pon en casa de admin');
+insert into actividad values(16, 'Soccer', 'Deporte', 8, 'Soccer en cancha');
+insert into actividad values(17, 'Parchis', 'Varios', 8, 'Parchis y cafe');
+insert into actividad values(18, 'UNO', 'Varios', 8, 'Cartas uno');
+insert into actividad values(19, 'Monopolio', 'Varios', 8, 'Jugar monopolio');
+insert into actividad values(20, 'XD', 'Socializar', 8, 'Hablar y reir');
+
+
+
