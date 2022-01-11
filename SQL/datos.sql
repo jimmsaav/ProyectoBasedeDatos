@@ -35,17 +35,32 @@ INSERT INTO MENSAJE VALUES
 (13, '2021-04-03 15:04:15', 'Muchas gracias, de verdad deseo conocer la iglesia, conoces otro lugar que puedas recomendar?', null, 'RE: Consulta sobre iglesia', 1, 7),
 (14, '2021-04-03 15:04:19', 'Dale, hasta luego.', null, 'RE: Pesca', 20, 19),
 (15, '2021-04-03 15:04:21', 'Si, te recomiendo visitar los parques de noche, son hermosos.', null, 'RE: Consulta sobre iglesia', 7, 1),
-(16, '2021-04-05 16:04:13', 'Pandemiaa acabate porfavor', null, 'Pascuas we', 19968, 15468),
-(17, '2021-04-05 16:04:13', 'Pandemiaa acabate porfavor', null, 'Pascuas we', 19968, 15468),
-(18, '2021-04-05 16:05:21', 'Pandemiaa acabate porfavor', null, 'Pascuas we', 19968, 15468),
-(19, '2021-04-05 15:05:25', 'Pandemiaa acabate porfavor', null, 'Pascuas we', 19968, 15468),
-(20, '2021-04-05 15:05:30', 'Pandemiaa acabate porfavor', null, 'Pascuas we', 19968, 15468);
+(16, '2021-04-05 16:04:13', 'Me parece bien, ire a visitar los parques tambien.', null, 'RE: Consulta sobre iglesia', 1, 7),
+(17, '2021-04-05 16:04:13', 'Vi este sitio para poder visitar, creo que podria ser interesante.', null, 'Visita a Quito', 4, 10),
+(18, '2021-04-05 16:05:21', 'Yap, ire a revisar eso, te respondo despues', null, 'RE: Visita a Quito', 4, 10),
+(19, '2021-04-05 15:05:25', 'Termine de revisar los sitios, estan interesantes, lo podemos planificar?', null, 'RE: Visita a Quito', 4, 10),
+(20, '2021-04-05 15:05:30', 'Claro, espero que podamos ir todos.', null, 'RE: Visita a Quito', 10, 4);
 
-insert into Amistad values(1010, 15468, 15368, '3-04-2021', 'Enviado' );
-insert into Amistad values(1013, 15368, 16868, '23-11-2021', 'Enviado' );
-insert into Amistad values(1016, 16868, 19968, '26-02-2021', 'Aceptado' );
-insert into Amistad values(1019, 19968, 19967, '28-07-2021', 'Aceptado' );
-insert into Amistad values(1022, 19967, 15468, '12-03-2021', 'Aceptado' );
+insert into Amistad values(1, 1, 2, '2021-04-03', 'Enviado' );
+insert into Amistad values(2, 1, 3, '2021-04-03', 'Enviado' );
+insert into Amistad values(3, 3, 4, '2021-04-03', 'Aceptado' );
+insert into Amistad values(4, 3, 2, '2021-04-03', 'Aceptado' );
+insert into Amistad values(5, 2, 4, '2021-04-03', 'Aceptado' );
+insert into Amistad values(6, 2, 5, '2021-04-03', 'Enviado' );
+insert into Amistad values(7, 2, 6, '2021-04-03', 'Aceptado' );
+insert into Amistad values(8, 2, 7, '2021-04-03', 'Aceptado' );
+insert into Amistad values(9, 7, 8, '2021-04-04', 'Enviado' );
+insert into Amistad values(10, 7, 1,'2021-04-04', 'Aceptado' );
+insert into Amistad values(11, 7, 3,'2021-04-04', 'Aceptado' );
+insert into Amistad values(12, 7, 5,'2021-04-04', 'Aceptado' );
+insert into Amistad values(13, 7, 9,'2021-04-04', 'Enviado' );
+insert into Amistad values(14, 20, 2,'2021-04-04', 'Aceptado' );
+insert into Amistad values(15, 20, 6, '2021-04-06', 'Enviado' );
+insert into Amistad values(16, 20, 9, '2021-04-06', 'Aceptado' );
+insert into Amistad values(17, 20, 11, '2021-04-10', 'Aceptado' );
+insert into Amistad values(18, 20, 12, '2021-04-15', 'Enviado' );
+insert into Amistad values(19, 14, 20, '2021-05-03', 'Aceptado' );
+insert into Amistad values(20, 14, 19, '2021-05-10', 'Aceptado' );
 
 insert into USUARIO_BLOQUEADO values (1200, 15468, 15368);
 insert into USUARIO_BLOQUEADO values (1300, 15368, 19967);
