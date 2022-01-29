@@ -38,7 +38,7 @@ insert into  Usuario values (36, 'Critopher', 'Arroba', 'Los Esteros', 'Cuenca',
 insert into  Usuario values (37, 'Anna', 'Bermudez', 'Sauces 3', 'Guayaquil', 1, false);
 insert into  Usuario values (38, 'Josselyn', 'Mendez', 'Jardines de la Sierra', 'Cuenca', 6, false);
 insert into  Usuario values (39, 'Pedro', 'Azansa', 'ciudadela FAE', 'Guayaqui', 1, false);
-insert into  Usuario values (30, 'Bryan', 'Perez', 'San Cristobal', 'Cuenca', 6, false);
+insert into  Usuario values (40, 'Bryan', 'Perez', 'San Cristobal', 'Cuenca', 6, false);
 
 INSERT INTO MENSAJE VALUES 
 (1, '2021-04-03 13:25:45', 'Encontre un lugar bastante interesante en Guayaquil', null, 'Propuesta de viaje', 17, 16),
