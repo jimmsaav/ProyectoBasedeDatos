@@ -19,6 +19,26 @@ insert into  Usuario values (17, 'Jaime', 'Barroso', 'San Blas', 'Cuenca', 6, fa
 insert into  Usuario values (18, 'Luisa', 'Lopez', 'Jardines de la Sierra', 'Cuenca', 6, false);
 insert into  Usuario values (19, 'Isabela', 'Castro', 'Los Sigsales', 'Cuenca', 6, false);
 insert into  Usuario values (20, 'Kiara', 'Montero', 'San Blas', 'Cuenca', 6, false);
+insert into  Usuario values (21, 'Aymee', 'Sarmient', 'Sauces 2', 'Guayaquil', NULL, true);
+insert into  Usuario values (22, 'Jimmy', 'Saavedra', 'Centro', 'Guayaquil', 1, false);
+insert into  Usuario values (23, 'Andrea', 'Loor', '1ero de Mayo', 'Portoviejo', 1, false);
+insert into  Usuario values (24, 'Michell', 'Cardenas', 'Alcedo y Carchi', 'Guayaquil', 1, false);
+insert into  Usuario values (25, 'Lorena', 'Zambrano', 'Cerro Santa Anna', 'Guayaquil', 1, false);
+insert into  Usuario values (26, 'Segundo', 'Bohorquez', 'Acuarela del Rio', 'Guyaquil', NULL, false);
+insert into  Usuario values (27, 'Cristina', 'Cardenas', 'Los rios y alcedo', 'Guayaquil', 6, false);
+insert into  Usuario values (28, 'Rafael', 'Mijail', 'Recreo', 'Duran', 6, false);
+insert into  Usuario values (29, 'Cesar', 'Noboa', 'Prosprina', 'Guayaquil', 6, false);
+insert into  Usuario values (30, 'Rachael', 'Dugan', 'Amazonas', 'Quito', 6, false);
+insert into  Usuario values (31, 'Roberto', 'Matute', 'Villa España', 'Guayaqui', 6, false);
+insert into  Usuario values (32, 'Gabriel', 'Topon', 'Calle Panama', 'Guayaquil', 1, false);
+insert into  Usuario values (33, 'Bolivar', 'Andrade', 'Atarazana', 'Guayaquil', 1, false);
+insert into  Usuario values (34, 'Emily', 'Zambrano', 'Ciudadela Balearia', 'Samborondon', 1, false);
+insert into  Usuario values (35, 'Daniel', 'Arias', 'Via Brazil', 'Guayaquil', 1, false);
+insert into  Usuario values (36, 'Critopher', 'Arroba', 'Los Esteros', 'Cuenca', 6, false);
+insert into  Usuario values (37, 'Anna', 'Bermudez', 'Sauces 3', 'Guayaquil', 1, false);
+insert into  Usuario values (38, 'Josselyn', 'Mendez', 'Jardines de la Sierra', 'Cuenca', 6, false);
+insert into  Usuario values (39, 'Pedro', 'Azansa', 'ciudadela FAE', 'Guayaqui', 1, false);
+insert into  Usuario values (30, 'Bryan', 'Perez', 'San Cristobal', 'Cuenca', 6, false);
 
 INSERT INTO MENSAJE VALUES 
 (1, '2021-04-03 13:25:45', 'Encontre un lugar bastante interesante en Guayaquil', null, 'Propuesta de viaje', 17, 16),
