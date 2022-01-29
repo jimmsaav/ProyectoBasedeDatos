@@ -61,6 +61,26 @@ INSERT INTO MENSAJE VALUES
 (18, '2021-04-05 16:05:21', 'Yap, ire a revisar eso, te respondo despues', null, 'RE: Visita a Quito', 4, 10),
 (19, '2021-04-05 15:05:25', 'Termine de revisar los sitios, estan interesantes, lo podemos planificar?', null, 'RE: Visita a Quito', 4, 10),
 (20, '2021-04-05 15:05:30', 'Claro, espero que podamos ir todos.', null, 'RE: Visita a Quito', 10, 4);
+(21, '2021-05-04 13:25:45', 'Encontre un lugar bastante bueno donde jugar bolos', null, 'Juegos de bolos', 17, 16),
+(22, '2021-05-04 13:30:12', 'Donde queda ubicado ese sitio suena bastante bien', null, 'RE: Juego de bolos', 16, 17),
+(23, '2021-05-04 13:45:11', 'Acabo de ver que tienen una muy buena promocion los sabados. Vamos a ir?', null, 'RE: Juego de bolos', 16, 17),
+(24, '2021-05-04 15:03:12', 'Claro podemos ir este sabado si deseas.', null,'RE: Juego de bolos', 17, 16),
+(25, '2021-05-04 15:04:13', 'Hola, quisiera saber si la pista de patinaje sobre hielo esta habilitada, como eres de quito pueda averiguar con mucha facilidad', null, 'Consulta pista de patinaje', 1, 7),
+(26, '2021-05-04 15:04:13', 'Vale entonces no vemos el dia de mañana para ir a jugar bolos', null, 'RE: Juego de bolos', 16, 17),
+(27, '2021-05-04 15:04:13', 'Hey me gusto ir ha hacer galletas en tu casa me gustaria repetirlo', null, 'Hornear Galletas', 19, 20),
+(28, '2021-05-04 15:04:13', 'Hola, te cuento que a mi tambien me encanto hacer galletas contigo a parte de que salieron muy ricas.', null, 'RE: Hornear galletas', 20, 19),
+(29, '2021-05-04 15:04:13', 'Hola, se te olvido tu reloj en mi casa, si deseas puedes pasarlo viendo cuando quieras durante el dia.', null, 'Reloj olvidado', 13, 14),
+(30, '2021-05-04 15:04:14', 'Claro, la pista de hielo esta habilitada hace un mes.', null, 'RE: Consulta pista de hielo', 7, 1),
+(31, '2021-05-04 15:04:14', 'Hola, gracias a Dios lo olvide en tu casa, estaba muy asustado.', null, 'RE: Reloj olvidado', 13, 14),
+(32, '2021-05-04 15:04:14', 'Vale entonces nos vemos en un par de dias para hacer de nuevo galletas!', null, 'RE: Pesca', 19, 20),
+(33, '2021-05-04 15:04:15', 'Oh genial entonces intentare ir lo mas pronto posible muchas gracias por la invitacion', null, 'RE: Consulta pista de patinaje', 1, 7),
+(34, '2021-05-04 15:04:19', 'Vale entonces nos vemos pronto ya quiero, sentir el olor de galletas recien horneadas', null, 'RE: Hornear galletas', 20, 19),
+(35, '2021-05-04 15:04:21', 'Claro tu ven cuando gustes esta abierto al publico todos los dias.', null, 'RE: Cosulta pista de patinaje', 7, 1),
+(36, '2021-05-04 16:04:13', 'Me parece super que este abierto todos los dias.', null, 'RE: Consulta pista de patinaje', 1, 7),
+(37, '2021-05-06 16:04:13', 'Acabo de ver que hay un mini Zoologico en el parque Samanes.', null, 'Visita Zoologico', 4, 10),
+(38, '2021-05-06 16:05:21', 'Ire a buscar informacion sobre esto gracias por avisar.', null, 'RE: Visita Zoologico', 4, 10),
+(39, '2021-05-06 15:05:25', 'Me parece un sitio super bonito', null, 'RE: Visita Zoologico', 4, 10),
+(40, '2021-05-06 15:05:30', 'Claro, espero poder ir lo mas pronto posible.', null, 'RE: Visita a Zoologico', 10, 4);
 
 insert into Amistad values(1, 1, 2, '2021-04-03', 'Enviado' );
 insert into Amistad values(2, 1, 3, '2021-04-03', 'Enviado' );
