@@ -26,12 +26,12 @@ insert into Usuario values
  (23, 0900000023, 'Andrea', 'Loor', '25@correo.com', 50, '1ero de Mayo', 'Portoviejo', 1, false),
  (24, 0900000024, 'Michell', 'Cardenas', '26@correo.com', 58, 'Alcedo y Carchi', 'Guayaquil', 1, false),
  (25, 0900000025, 'Lorena', 'Zambrano', '27@correo.com', 58, 'Cerro Santa Anna', 'Guayaquil', 1, false),
- (26, 0900000026, 'Segundo', 'Bohorquez', '28@correo.com', 58, 'Acuarela del Rio', 'Guyaquil', NULL, false),
+ (26, 0900000026, 'Segundo', 'Bohorquez', '28@correo.com', 58, 'Acuarela del Rio', 'Guayaquil', NULL, false),
  (27, 0900000027, 'Cristina', 'Cardenas', '29@correo.com', 58, 'Los rios y alcedo', 'Guayaquil', 6, false),
  (28, 0900000028, 'Rafael', 'Mijail', '30@correo.com', 58,'Recreo', 'Duran', 6, false),
  (29, 0900000029, 'Cesar', 'Noboa', '31@correo.com', 25, 'Prosprina', 'Guayaquil', 6, false),
  (30, 0900000030, 'Rachael', 'Dugan', '32@correo.com', 35, 'Amazonas', 'Quito', 6, false),
- (31, 0900000031, 'Roberto', 'Matute', '33@correo.com', 42, 'Villa España', 'Guayaqui', 6, false),
+ (31, 0900000031, 'Roberto', 'Matute', '33@correo.com', 42, 'Villa España', 'Guayaquil', 6, false),
  (32, 0900000032, 'Gabriel', 'Topon', '34@correo.com', 40, 'Calle Panama', 'Guayaquil', 1, false),
  (33, 0900000033, 'Bolivar', 'Andrade', '35@correo.com', 45, 'Atarazana', 'Guayaquil', 1, false),
  (34, 0900000034, 'Emily', 'Zambrano', '36@correo.com', 46, 'Ciudadela Balearia', 'Samborondon', 1, false),
@@ -39,7 +39,7 @@ insert into Usuario values
  (36, 0900000036, 'Critopher', 'Arroba', '38@correo.com', 48,'Los Esteros', 'Cuenca', 6, false),
  (37, 0900000037, 'Anna', 'Bermudez', '39@correo.com', 16, 'Sauces 3', 'Guayaquil', 1, false),
  (38, 0900000038, 'Josselyn', 'Mendez', '39@correo.com', 14,'Jardines de la Sierra', 'Cuenca', 6, false),
- (39, 0900000039, 'Pedro', 'Azansa',  '40@correo.com', 19, 'ciudadela FAE', 'Guayaqui', 1, false),
+ (39, 0900000039, 'Pedro', 'Azansa',  '40@correo.com', 19, 'ciudadela FAE', 'Guayaquil', 1, false),
  (40, 0900000040, 'Bryan', 'Perez', '41@correo.com', 20, 'San Cristobal', 'Cuenca', 6, false);
 
 
@@ -251,6 +251,7 @@ insert into Sitio values(37, 'City mall', 'Junior 4ta etapa 7', '0994599999', 1,
 insert into Sitio values(38, 'Alborada norte', 'ALborada 14va 9', '0919999999', 0, 18, null, null);
 insert into Sitio values(39, 'Centro sur', 'Centro entre aurora y emilio 3', '0996599999', 1, 19, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
 insert into Sitio values(40, 'Noroeste', 'Noroeste 23', '0999993579', 0, 20, null, null);
+
 insert into ListaHorarioAtencion values
 (1, 1),
 (2, 2),
