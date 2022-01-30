@@ -253,6 +253,7 @@ create procedure consultar_sitios_porUsuarios(in idUsuario int, in idActividad i
 begin
 select s.nombre from Sitio s ;
 END //
+DELIMITER;
 
 ##Proceso 12: Consultar sitios por actividad
 drop procedure if exist consultar_sitios_porActividad;
@@ -263,6 +264,8 @@ begin
 select s.nombre from Sitio s;
 
 END //
+DELIMITER;
+
 
 ##Proceso 13: Consultar sitios por direccion
 drop procedure if exist consultar_sitio_porDireccion
@@ -273,6 +276,10 @@ begin
 selec s.nombre from sitio as si where si.direccion = direccion in ;
 
 END//
+DELIMITER;
+
+
+
 ##Proceso 14: Consultar sitios por horario de atencion
 
 drop procedure if exist consultar_sitio_porHorarioAtencion;
@@ -282,6 +289,8 @@ begin
 select s.nombre from sitio as si, actividad as ac where si.idListaHorarioAtencion = idListaHorarioAtencion in;
 
 END//
+DELIMITER;
+
 
 ##Proceso 15: Listar amigos
 drop procedure if exist listar_amigos;
@@ -293,6 +302,8 @@ select idAmistad, idUsuario1, idUsuario2
 from AMISTAD
 where idUsuario1 = 1 || idUsuario2 = 1;
 END//
+DELIMITER;
+
 
 
 ## Proceso 16: Listar amigos recientes
@@ -302,6 +313,8 @@ create procedure listar_amigos_recientes(in idUsuarioIN int)
 begin 
 	select distinct IF(idReceptor = idUsuarioIN, idEmisor, idReceptor) as idAmigosRecientes from mensaje order by fecha DESC; 
 end //
+DELIMITER;
+
 
 ## Proceso 17: Buscar amigos por apellido
 drop procedure if exists amigos_apellido;
@@ -310,6 +323,7 @@ create procedure amigos_apellido(in idUsuarioIN int, in apellidoIN varchar(50))
 begin 
 	select IF(a.idUsuario1 = idUsuarioIN, a.idUsuario2, a.idUsuario1) as idUsuariosAmigos from usuario as u, amistad as a where u.apellido like apellidoIN and ((idUsuario1 = idUsuarioIn or idUsuario1 = u.idUsuario ) and (idUsuario2 = idUsuarioIn or idUsuario2 = u.idUsuario));
 end //
+DELIMITER;
 
 ## Proceso 18: Consultar datos del usuario
 drop procedure if exists consultar_datos_usuario;
@@ -318,6 +332,7 @@ create procedure consultar_datos_usuario(in idUsuarioIN int)
 begin 
 	select * from usuario where idUsuario = idUsuarioIN;
 end //
+DELIMITER;
 
 ## Proceso 19: Consultar lista de actividades del usuario
 drop procedure if exists actividades_usuario;
@@ -326,6 +341,7 @@ create procedure actividades_usuario(in idUsuarioIN int)
 begin 
 	select a.nombre from preferenciasporusuario as pU, actividad as a  where pU.idUsuario = idUsuarioIN and a.idActividad = pU.idActividad;
 end //
+DELIMITER;
 
 ## Proceso 20: Consultar mensajes por estado (ej.. leídos, no leídos, enviado)
 drop procedure if exists encontrar_compatibilidad;
@@ -335,6 +351,8 @@ begin
     select @idAct := idActividad from Actividad where nombre like nombreActividad;
     select IF(a.idUsuario1 = idUsuarioIN, a.idUsuario2, a.idUsuario1) as compatibles from preferenciasporusuario as pU, amistad as a where pU.idActividad = @idAct and (idUsuario1 = idUsuarioIn or idUsuario2 = idUsuarioIn) and a.estado like 'Aceptado';     
 end //
+
+DELIMITER;
 
 
 
