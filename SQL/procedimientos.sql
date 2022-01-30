@@ -213,9 +213,16 @@ from AMISTAD
 where idUsuario1 = 1 || idUsuario2 = 1;
 END//
 
+## Proceso 19: Consultar lista de actividades del usuario
+drop procedure if exists actividades_usuario;
+DELIMITER //
+create procedure actividades_usuario(in idUsuarioIN int)
+begin 
+	select a.nombre from preferenciasporusuario as pU, actividad as a  where pU.idUsuario = idUsuarioIN and a.idActividad = pU.idActividad;
+end //
+
 ## Proceso 20: Consultar mensajes por estado (ej.. leídos, no leídos, enviado)
 drop procedure if exists encontrar_compatibilidad;
-
 DELIMITER //
 create procedure encontrar_compatibilidad(in idUsuarioIN int, in nombreActividad varchar(100))
 begin 
