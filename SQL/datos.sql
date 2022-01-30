@@ -1,4 +1,5 @@
 use Tliving;
+
 insert into  Usuario values (1, 0900000001, 'Pedro', 'Zambrano', '1@correo.com', 35, 'Alborada', 'Guayaquil', NULL, true);
 insert into  Usuario values (2, 0900000002, 'Juan', 'Hidalgo', '2@correo.com', 34 , 'Ciudad del rio', 'Guayaquil', 1, false);
 insert into  Usuario values (3, 0900000003, 'Carlos', 'Lopez', '3@correo.com',   50, 'Mucho lote', 'Guayaquil', 1, false);
@@ -40,47 +41,48 @@ insert into  Usuario values (38, 0900000038, 'Josselyn', 'Mendez', '39@correo.co
 insert into  Usuario values (39, 0900000039, 'Pedro', 'Azansa',  '40@correo.com', 19, 'ciudadela FAE', 'Guayaqui', 1, false);
 insert into  Usuario values (40, 0900000040, 'Bryan', 'Perez', '41@correo.com', 20, 'San Cristobal', 'Cuenca', 6, false);
 
+
 INSERT INTO MENSAJE VALUES 
-(1, '2021-04-03 13:25:45', 'Encontre un lugar bastante interesante en Guayaquil', null, 'Propuesta de viaje', 'Leído', 17, 16),
-(2, '2021-04-03 13:30:12', 'Lo voy a revisar dame unos minutos', null, 'RE: Propuesta de viaje', 'Leído', 16, 17),
-(3, '2021-04-03 13:45:11', 'Lo acabo de revisar, esta increible el lugar. Cuando lo vamos a visitar?', null, 'RE: Propuesta de viaje', 'Leído', 16, 17),
-(4, '2021-04-03 15:03:12', 'Podemos ir a visitarlo mañana.', null,'RE: Propuesta de viaje', 'Leído', 17, 16),
-(5, '2021-04-03 15:04:13', 'Hola, me gustaria saber si la iglesia de San Blas es bonito, ya que eres de Cuenca', null, 'Consulta sobre iglesia', 'Leído', 1, 7),
-(6, '2021-04-03 15:04:13', 'Me parece bien, entonces mañana a las 10am nos encontramos alla', null, 'RE: Propuesta de viaje', 'Leído', 16, 17),
-(7, '2021-04-03 15:04:13', 'Hola, el viaje de la otra vez estuvo interesante, te gustaria volver a pescar?', null, 'Pesca', 'Leído', 19, 20),
-(8, '2021-04-03 15:04:13', 'Claro que si, de hecho estaba a punto de escribirte lo mismo.', null, 'RE: Pesca', 'Leído', 20, 19),
-(9, '2021-04-03 15:04:13', 'Oye se te quedo tu mochila en mi carro cuando fuimos a excursionar.', null, 'Tu mochila', 'Leído' , 13, 14),
-(10, '2021-04-03 15:04:14', 'Claro, la iglesia es muy bonita, te la recomiendo mucho.', null, 'RE: Consulta sobre iglesia', 'Leído', 7, 1),
-(11, '2021-04-03 15:04:14', 'Graciaaas... se me habia olvidado donde estaba.', null, 'RE: Tu mochila', 'Leído', 13, 14),
-(12, '2021-04-03 15:04:14', 'Excelente, a las 5am entonces vayamos a pescar, te veo luego!', null, 'RE: Pesca', 'Leído', 19, 20),
-(13, '2021-04-03 15:04:15', 'Muchas gracias, de verdad deseo conocer la iglesia, conoces otro lugar que puedas recomendar?', null, 'RE: Consulta sobre iglesia', 'Leído', 1, 7),
-(14, '2021-04-03 15:04:19', 'Dale, hasta luego.', null, 'RE: Pesca', 'Leído', 20, 19),
-(15, '2021-04-03 15:04:21', 'Si, te recomiendo visitar los parques de noche, son hermosos.', null, 'RE: Consulta sobre iglesia', 'Leído', 7, 1),
-(16, '2021-04-05 16:04:13', 'Me parece bien, ire a visitar los parques tambien.', null, 'RE: Consulta sobre iglesia', 'Leído', 1, 7),
-(17, '2021-04-05 16:04:13', 'Vi este sitio para poder visitar, creo que podria ser interesante.', null, 'Visita a Quito', 'Leído', 4, 10),
-(18, '2021-04-05 16:05:21', 'Yap, ire a revisar eso, te respondo despues', null, 'RE: Visita a Quito', 'Leído', 4, 10),
-(19, '2021-04-05 15:05:25', 'Termine de revisar los sitios, estan interesantes, lo podemos planificar?', null, 'RE: Visita a Quito', 'Leído', 4, 10),
-(20, '2021-04-05 15:05:30', 'Claro, espero que podamos ir todos.', null, 'RE: Visita a Quito', 'Leído', 10, 4);
-(21, '2021-05-04 13:25:45', 'Encontre un lugar bastante bueno donde jugar bolos', null, 'Juegos de bolos', 'Leído', 17, 16),
-(22, '2021-05-04 13:30:12', 'Donde queda ubicado ese sitio suena bastante bien', null, 'RE: Juego de bolos', 'Leído', 16, 17),
-(23, '2021-05-04 13:45:11', 'Acabo de ver que tienen una muy buena promocion los sabados. Vamos a ir?', null, 'RE: Juego de bolos', 'Leído', 16, 17),
-(24, '2021-05-04 15:03:12', 'Claro podemos ir este sabado si deseas.', null,'RE: Juego de bolos', 'Leído', 17, 16),
-(25, '2021-05-04 15:04:13', 'Hola, quisiera saber si la pista de patinaje sobre hielo esta habilitada, como eres de quito pueda averiguar con mucha facilidad', null, 'Consulta pista de patinaje', 'Leído', 1, 7),
-(26, '2021-05-04 15:04:13', 'Vale entonces no vemos el dia de mañana para ir a jugar bolos', null, 'RE: Juego de bolos', 'Leído', 16, 17),
-(27, '2021-05-04 15:04:13', 'Hey me gusto ir ha hacer galletas en tu casa me gustaria repetirlo', null, 'Hornear Galletas', 'Leído', 19, 20),
-(28, '2021-05-04 15:04:13', 'Hola, te cuento que a mi tambien me encanto hacer galletas contigo a parte de que salieron muy ricas.', null, 'RE: Hornear galletas', 'Leído', 20, 19),
-(29, '2021-05-04 15:04:13', 'Hola, se te olvido tu reloj en mi casa, si deseas puedes pasarlo viendo cuando quieras durante el dia.', null, 'Reloj olvidado', 'Leído', 13, 14),
-(30, '2021-05-04 15:04:14', 'Claro, la pista de hielo esta habilitada hace un mes.', null, 'RE: Consulta pista de hielo', 'Leído', 7, 1),
-(31, '2021-05-04 15:04:14', 'Hola, gracias a Dios lo olvide en tu casa, estaba muy asustado.', null, 'RE: Reloj olvidado', 'Leído', 13, 14),
-(32, '2021-05-04 15:04:14', 'Vale entonces nos vemos en un par de dias para hacer de nuevo galletas!', null, 'RE: Pesca', 'Leído', 19, 20),
-(33, '2021-05-04 15:04:15', 'Oh genial entonces intentare ir lo mas pronto posible muchas gracias por la invitacion', null, 'RE: Consulta pista de patinaje', 'Leído', 1, 7),
-(34, '2021-05-04 15:04:19', 'Vale entonces nos vemos pronto ya quiero, sentir el olor de galletas recien horneadas', null, 'RE: Hornear galletas', 'Leído', 20, 19),
-(35, '2021-05-04 15:04:21', 'Claro tu ven cuando gustes esta abierto al publico todos los dias.', null, 'RE: Cosulta pista de patinaje', 'Leído', 7, 1),
-(36, '2021-05-04 16:04:13', 'Me parece super que este abierto todos los dias.', null, 'RE: Consulta pista de patinaje', 'Leído', 1, 7),
-(37, '2021-05-06 16:04:13', 'Acabo de ver que hay un mini Zoologico en el parque Samanes.', null, 'Visita Zoologico', 'Leído', 4, 10),
-(38, '2021-05-06 16:05:21', 'Ire a buscar informacion sobre esto gracias por avisar.', null, 'RE: Visita Zoologico', 'Leído', 4, 10),
-(39, '2021-05-06 15:05:25', 'Me parece un sitio super bonito', null, 'RE: Visita Zoologico', 'Leído', 4, 10),
-(40, '2021-05-06 15:05:30', 'Claro, espero poder ir lo mas pronto posible.', null, 'RE: Visita a Zoologico', 'Leído', 10, 4);
+(1, '2021-04-03 13:25:45', 'Encontre un lugar bastante interesante en Guayaquil', 'Propuesta de viaje', 'Leído', 17, 16),
+(2, '2021-04-03 13:30:12', 'Lo voy a revisar dame unos minutos', 'RE: Propuesta de viaje', 'Leído', 16, 17),
+(3, '2021-04-03 13:45:11', 'Lo acabo de revisar, esta increible el lugar. Cuando lo vamos a visitar?', 'RE: Propuesta de viaje', 'Leído', 16, 17),
+(4, '2021-04-03 15:03:12', 'Podemos ir a visitarlo mañana.','RE: Propuesta de viaje', 'Leído', 17, 16),
+(5, '2021-04-03 15:04:13', 'Hola, me gustaria saber si la iglesia de San Blas es bonito, ya que eres de Cuenca', 'Consulta sobre iglesia', 'Leído', 1, 7),
+(6, '2021-04-03 15:04:13', 'Me parece bien, entonces mañana a las 10am nos encontramos alla', 'RE: Propuesta de viaje', 'Leído', 16, 17),
+(7, '2021-04-03 15:04:13', 'Hola, el viaje de la otra vez estuvo interesante, te gustaria volver a pescar?', 'Pesca', 'Leído', 19, 20),
+(8, '2021-04-03 15:04:13', 'Claro que si, de hecho estaba a punto de escribirte lo mismo.', 'RE: Pesca', 'Leído', 20, 19),
+(9, '2021-04-03 15:04:13', 'Oye se te quedo tu mochila en mi carro cuando fuimos a excursionar.', 'Tu mochila', 'Leído' , 13, 14),
+(10, '2021-04-03 15:04:14', 'Claro, la iglesia es muy bonita, te la recomiendo mucho.', 'RE: Consulta sobre iglesia', 'Leído', 7, 1),
+(11, '2021-04-03 15:04:14', 'Graciaaas... se me habia olvidado donde estaba.', 'RE: Tu mochila', 'Leído', 13, 14),
+(12, '2021-04-03 15:04:14', 'Excelente, a las 5am entonces vayamos a pescar, te veo luego!', 'RE: Pesca', 'Leído', 19, 20),
+(13, '2021-04-03 15:04:15', 'Muchas gracias, de verdad deseo conocer la iglesia, conoces otro lugar que puedas recomendar?', 'RE: Consulta sobre iglesia', 'Leído', 1, 7),
+(14, '2021-04-03 15:04:19', 'Dale, hasta luego.', 'RE: Pesca', 'Leído', 20, 19),
+(15, '2021-04-03 15:04:21', 'Si, te recomiendo visitar los parques de noche, son hermosos.', 'RE: Consulta sobre iglesia', 'Leído', 7, 1),
+(16, '2021-04-05 16:04:13', 'Me parece bien, ire a visitar los parques tambien.', 'RE: Consulta sobre iglesia', 'Leído', 1, 7),
+(17, '2021-04-05 16:04:13', 'Vi este sitio para poder visitar, creo que podria ser interesante.', 'Visita a Quito', 'Leído', 4, 10),
+(18, '2021-04-05 16:05:21', 'Yap, ire a revisar eso, te respondo despues', 'RE: Visita a Quito', 'Leído', 4, 10),
+(19, '2021-04-05 15:05:25', 'Termine de revisar los sitios, estan interesantes, lo podemos planificar?', 'RE: Visita a Quito', 'Leído', 4, 10),
+(20, '2021-04-05 15:05:30', 'Claro, espero que podamos ir todos.', 'RE: Visita a Quito', 'Leído', 10, 4),
+(21, '2021-05-04 13:25:45', 'Encontre un lugar bastante bueno donde jugar bolos', 'Juegos de bolos', 'Leído', 17, 16),
+(22, '2021-05-04 13:30:12', 'Donde queda ubicado ese sitio suena bastante bien', 'RE: Juego de bolos', 'Leído', 16, 17),
+(23, '2021-05-04 13:45:11', 'Acabo de ver que tienen una muy buena promocion los sabados. Vamos a ir?', 'RE: Juego de bolos', 'Leído', 16, 17),
+(24, '2021-05-04 15:03:12', 'Claro podemos ir este sabado si deseas.','RE: Juego de bolos', 'Leído', 17, 16),
+(25, '2021-05-04 15:04:13', 'Hola, quisiera saber si la pista de patinaje sobre hielo esta habilitada, como eres de quito pueda averiguar con mucha facilidad', 'Consulta pista de patinaje', 'Leído', 1, 7),
+(26, '2021-05-04 15:04:13', 'Vale entonces no vemos el dia de mañana para ir a jugar bolos', 'RE: Juego de bolos', 'Leído', 16, 17),
+(27, '2021-05-04 15:04:13', 'Hey me gusto ir ha hacer galletas en tu casa me gustaria repetirlo', 'Hornear Galletas', 'Leído', 19, 20),
+(28, '2021-05-04 15:04:13', 'Hola, te cuento que a mi tambien me encanto hacer galletas contigo a parte de que salieron muy ricas.', 'RE: Hornear galletas', 'Leído', 20, 19),
+(29, '2021-05-04 15:04:13', 'Hola, se te olvido tu reloj en mi casa, si deseas puedes pasarlo viendo cuando quieras durante el dia.', 'Reloj olvidado', 'Leído', 13, 14),
+(30, '2021-05-04 15:04:14', 'Claro, la pista de hielo esta habilitada hace un mes.', 'RE: Consulta pista de hielo', 'Leído', 7, 1),
+(31, '2021-05-04 15:04:14', 'Hola, gracias a Dios lo olvide en tu casa, estaba muy asustado.', 'RE: Reloj olvidado', 'Leído', 13, 14),
+(32, '2021-05-04 15:04:14', 'Vale entonces nos vemos en un par de dias para hacer de nuevo galletas!', 'RE: Pesca', 'Leído', 19, 20),
+(33, '2021-05-04 15:04:15', 'Oh genial entonces intentare ir lo mas pronto posible muchas gracias por la invitacion', 'RE: Consulta pista de patinaje', 'Leído', 1, 7),
+(34, '2021-05-04 15:04:19', 'Vale entonces nos vemos pronto ya quiero, sentir el olor de galletas recien horneadas', 'RE: Hornear galletas', 'Leído', 20, 19),
+(35, '2021-05-04 15:04:21', 'Claro tu ven cuando gustes esta abierto al publico todos los dias.', 'RE: Cosulta pista de patinaje', 'Leído', 7, 1),
+(36, '2021-05-04 16:04:13', 'Me parece super que este abierto todos los dias.', 'RE: Consulta pista de patinaje', 'Leído', 1, 7),
+(37, '2021-05-06 16:04:13', 'Acabo de ver que hay un mini Zoologico en el parque Samanes.', 'Visita Zoologico', 'Leído', 4, 10),
+(38, '2021-05-06 16:05:21', 'Ire a buscar informacion sobre esto gracias por avisar.', 'RE: Visita Zoologico', 'Leído', 4, 10),
+(39, '2021-05-06 15:05:25', 'Me parece un sitio super bonito', 'RE: Visita Zoologico', 'Leído', 4, 10),
+(40, '2021-05-06 15:05:30', 'Claro, espero poder ir lo mas pronto posible.', 'RE: Visita a Zoologico', 'Leído', 10, 4);
 
 insert into Amistad values(1, 1, 2, '2021-04-03', 'Enviado' );
 insert into Amistad values(2, 1, 3, '2021-04-03', 'Enviado' );
@@ -163,7 +165,6 @@ insert into USUARIO_BLOQUEADO values (37, 20, 31);
 insert into USUARIO_BLOQUEADO values (38, 40, 32);
 insert into USUARIO_BLOQUEADO values (39, 40, 33);
 insert into USUARIO_BLOQUEADO values (40, 40, 34);
-
 
 insert into actividad values(01, 'Caminar', 'Deporte', 10, 'Una caminata para ayudar a mantener el cuerpo y mente sanos.');
 insert into actividad values(02, 'Bailar', 'Socializar', 10, 'Bailar regula el estres y ayuda a mantener el ritmo cardiaco.');
@@ -288,7 +289,6 @@ insert into ListaHorarioAtencion values(39, 39);
 insert into ListaHorarioAtencion values(40, 40);
 insert into ListaHorarioAtencion values(30, 30);
 
-
 insert into HorarioAtencion values(1,'2021-04-09 13:25:45','2021-04-09 16:25:45', 1);
 insert into HorarioAtencion values(2, '2021-05-10 09:25:45','2021-05-10 12:25:45', 2);
 insert into HorarioAtencion values(3, '2021-06-11 12:25:45','2021-04-09 18:25:45', 3);
@@ -329,7 +329,6 @@ insert into HorarioAtencion values(37, '2021-07-12 15:25:45','2021-04-09 20:25:4
 insert into HorarioAtencion values(38, '2021-12-30 13:25:45','2021-12-30 16:25:45', 38);
 insert into HorarioAtencion values(39, '2021-07-12 15:25:45','2021-04-09 20:25:45', 39);
 insert into HorarioAtencion values(40, '2021-04-09 13:25:45','2021-04-09 16:25:45', 40);
-
 
 insert into Asistencia values(1, '2021-02-26', 1, 1);
 insert into Asistencia values(2, '2020-03-26', 2, 2);
