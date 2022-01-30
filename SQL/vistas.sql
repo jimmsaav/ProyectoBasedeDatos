@@ -8,4 +8,7 @@ create view preferenciasPorUsuario as
 drop view if exists usuariosPorCiudad;
 create view usuariosPorCiudad as 
 	select ciudad, count(*) from usuario group by ciudad;
-    
+
+drop view if exists usuariosPorModerador;
+create view usuariosPorModerador as 
+	select idUsuario, count(*) from usuario where es_moderador = 1 group by idUsuario;
