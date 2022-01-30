@@ -20,7 +20,6 @@ CREATE TABLE MENSAJE (
   idMensaje INT not NULL auto_increment,
   fecha datetime not NULL,
   contenido varchar(1000) not NULL,
-  adjunto json,
   asunto varchar(50) NOT NULL,
   estado varchar(15) not null,
   idReceptor INT NOT NULL,
