@@ -225,13 +225,6 @@ DELIMITER;
 
 
 
-
-
-
-
-
-
-
 ##  Proceso 11: Consultar sitios por usuario
  drop procedure if exists consultar_sitios_porUsuario;
 DELIMETER//
@@ -247,25 +240,34 @@ create procedure consultar_sitio_porActividad(in idActividad int, in idSitio int
 begin
 
 select s.nombre from Sitio s;
-
+END //
 ##Proceso 13: Consultar sitios por direccion
 drop procedure if exists consultar_sitio_porDireccion;
+DELIMETER//
+Create procedure consultar_sitio_porDireccion(in idActividad int, in Sitio int)
+begin
 
+selec s.nombre from Sitio.s where 
+END //
 ##Proceso 14: Consultar sitios por horario de atencion
 
-drop procedure if exists consultar_sitio_porHorarioAtencion;
+drop procedure if exist consultar_sitio_porHorarioAtencion;
 DELIMETER//
 create procedure consultar_sitio_porHorarioAtencion()
+begin 
+select s.nombre from sitio as si, actividad as ac where si.idListaHorarioAtencion = idListaHorarioAtencion in;
 
 ##Proceso 15: Listar amigos
-drop procedure if exists listar_amigos;
+drop procedure if exist listar_amigos;
+
 DELIMETER//
-create procedure listar_amigos(in idUsuario int)
+create procedure listar_amigos(in idUsuario)
 begin
 select idAmistad, idUsuario1, idUsuario2
 from AMISTAD
 where idUsuario1 = 1 || idUsuario2 = 1;
 END//
+
 
 ## Proceso 16: Listar amigos recientes
 drop procedure if exists listar_amigos_recientes;

@@ -211,48 +211,46 @@ insert into actividad values
 (39, 'Floricultura', 'Naturaleza', 9, 'Planta las flores mas hermosas.'),
 (40, 'Silvicultura', 'Naturaleza', 9, 'Planta todo tipo de arbol y descubre como cuidarlos.');
 
-insert into Sitio values
-(1, 'Samanes', 'Samanes 2', '0999999989', 1, 01, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(2, 'Mucho lote', 'Mucho lote 4ta', '0699999999', 1, 02, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(3, 'Sauces', 'Sauces 2', '0999999969', 1, 03, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(4, 'Alborada', 'Alborada 2', '0999499999', 0, 04, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(5, 'Sur', 'Sur 1', '0999992399', 0, 05, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwfTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(6, 'Norte', 'Norte complejo', '0459999999', 1, 06, 'https://us05web.zoom.us/j/81990938475?pfd=hWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(7, 'Centro', 'Aurora y boyaca', '0679999999', 0, 07, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(8, 'Aurora', 'Mz 2456 villa 3', '0997899999', 1, 08, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(9, 'Sambo', 'Villa italia mz 34', '0989999999', 1, 09, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(10, 'La Joya', 'Maz 34 villa diamante', '0989999999', 1, 10, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(11, 'Villa del rey', 'Villa del rey 2', '0975999999', 0, 11, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(12, 'Colinas', 'Colinas 2', '0999999659', 1, 12, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(13, 'Ciudadela', 'Ciudadela 2', '0992399999', 1, 13, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(14, 'Samna', 'Samna 2', '0999996599', 1, 14, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(15, 'Riocentro', 'Norte Orellana', '0945699999', 0, 15, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(16, 'Mall', 'Victor Emilio Estrada', '0439999999', 0, 16, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(17, 'City mall', 'Junior 4ta etapa', '0994599999', 1, 17, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(18, 'Alborada norte', 'ALborada 14va', '0919999999', 0, 18, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(19, 'Centro sur', 'Centro entre aurora y emilio', '0996599999', 1, 19, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(20, 'Noroeste', 'Noroeste 2', '0999993579', 0, 20, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom'),
-(21, 'Samanes', 'Samanes 2', '0999999989', 1, 01, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(22, 'Mucho lote', 'Mucho lote 4ta', '0699999999', 1, 02, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(23, 'Sauces', 'Sauces 2', '0999999969', 1, 03, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(24, 'Alborada', 'Alborada 2', '0999499999', 0, 04, null, null),
-(25, 'Sur', 'Sur 1', '0999992399', 0, 05, null, null),
-(26, 'Norte', 'Norte complejo', '0459999999', 1, 06, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(27, 'Centro', 'Aurora y boyaca', '0679999999', 0, 07, null, null),
-(28, 'Aurora', 'Mz 2456 villa 3', '0997899999', 1, 08, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(29, 'Sambo', 'Villa italia mz 34', '0989999999', 1, 09, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(30, 'La Joya', 'Maz 34 villa diamante', '0989999999', 1, 10, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(31, 'Villa del rey', 'Villa del rey 2', '0975999999', 0, 11, null, null),
-(32, 'Colinas', 'Colinas 2', '0999999659', 1, 12, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(33, 'Ciudadela', 'Ciudadela 2', '0992399999', 1, 13, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(34, 'Samna', 'Samna 2', '0999996599', 1, 14, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(35, 'Riocentro', 'Norte Orellana', '0945699999', 0, 15, null, null),
-(36, 'Mall', 'Victor Emilio Estrada', '0439999999', 0, 16, null, null),
-(37, 'City mall', 'Junior 4ta etapa', '0994599999', 1, 17, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(38, 'Alborada norte', 'ALborada 14va', '0919999999', 0, 18, null, null),
-(39, 'Centro sur', 'Centro entre aurora y emilio', '0996599999', 1, 19, 'https://cedia.zoom.us/j/84913221130', 'Zoom'),
-(40, 'Noroeste', 'Noroeste 2', '0999993579', 0, 20, null, null);
-
+insert into Sitio values(1, 'Samanes', 'Samanes 2', '0999999989', 1, 01, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(2, 'Mucho lote', 'Mucho lote 4ta', '0699999999', 1, 02, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(3, 'Sauces', 'Sauces 2', '0999999969', 1, 03, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(4, 'Alborada', 'Alborada 2', '0999499999', 0, 04, null, null);
+insert into Sitio values(5, 'Sur', 'Sur 1', '0999992399', 0, 05, null, null);
+insert into Sitio values(6, 'Norte', 'Norte complejo', '0459999999', 1, 06, 'https://us05web.zoom.us/j/81990938475?pfd=hWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(7, 'Centro', 'Aurora y boyaca', '0679999999', 0, 07, null, null);
+insert into Sitio values(8, 'Aurora', 'Mz 2456 villa 3', '0997899999', 1, 08, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(9, 'Sambo', 'Villa italia mz 34', '0989999999', 1, 09, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(10, 'La Joya', 'Maz 34 villa diamante', '0989999999', 1, 10, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(11, 'Villa del rey', 'Villa del rey 2', '0975999999', 0, 11, null, null);
+insert into Sitio values(12, 'Colinas', 'Colinas 2', '0999999659', 1, 12, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(13, 'Ciudadela', 'Ciudadela 2', '0992399999', 1, 13, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(14, 'Samna', 'Samna 2', '0999996599', 1, 14, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(15, 'Riocentro', 'Norte Orellana', '0945699999', 0, 15, null, null);
+insert into Sitio values(16, 'Mall', 'Victor Emilio Estrada', '0439999999', 0, 16, null, null);
+insert into Sitio values(17, 'City mall', 'Junior 4ta etapa', '0994599999', 1, 17, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(18, 'Alborada norte', 'ALborada 14va', '0919999999', 0, 18, null, null);
+insert into Sitio values(19, 'Centro sur', 'Centro entre aurora y emilio', '0996599999', 1, 19, 'https://us05web.zoom.us/j/81990938475?pwd=VWZJMWkwOTdIT3d4Sm5LaDFUOUd3QT09', 'Zoom');
+insert into Sitio values(20, 'Noroeste', 'Noroeste 2', '0999993579', 0, 20, null, null);
+insert into Sitio values(21, 'Samanes', 'Samanes 3', '0999999989', 1, 01, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(22, 'Mucho lote', 'Mucho lote 5ta', '0699999999', 1, 02, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(23, 'Sauces', 'Sauces 3', '0999999969', 1, 03, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(24, 'Alborada', 'Alborada 5', '0999499999', 0, 04, null, null);
+insert into Sitio values(25, 'Sur', 'Sur 8', '0999992399', 0, 05, null, null);
+insert into Sitio values(26, 'Norte', 'Norte complejo 1', '0459999999', 1, 06, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(27, 'Centro', 'Aurora y boyaca 1', '0679999999', 0, 07, null, null);
+insert into Sitio values(28, 'Aurora', 'Mz 2456 villa 8', '0997899999', 1, 08, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(29, 'Sambo', 'Villa italia mz 39', '0989999999', 1, 09, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(30, 'La Joya', 'Maz 30 villa diamante', '0989999999', 1, 10, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(31, 'Villa del rey', 'Villa del rey 4', '0975999999', 0, 11, null, null);
+insert into Sitio values(32, 'Colinas', 'Colinas 5', '0999999659', 1, 12, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(33, 'Ciudadela', 'Ciudadela 10', '0992399999', 1, 13, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(34, 'Samna', 'Samna 45', '0999996599', 1, 14, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(35, 'Riocentro', 'Norte Orellana 2', '0945699999', 0, 15, null, null);
+insert into Sitio values(36, 'Mall', 'Victor Emilio Estrada 5', '0439999999', 0, 16, null, null);
+insert into Sitio values(37, 'City mall', 'Junior 4ta etapa 7', '0994599999', 1, 17, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(38, 'Alborada norte', 'ALborada 14va 9', '0919999999', 0, 18, null, null);
+insert into Sitio values(39, 'Centro sur', 'Centro entre aurora y emilio 3', '0996599999', 1, 19, 'https://cedia.zoom.us/j/84913221130', 'Zoom');
+insert into Sitio values(40, 'Noroeste', 'Noroeste 23', '0999993579', 0, 20, null, null);
 insert into ListaHorarioAtencion values
 (1, 1),
 (2, 2),
@@ -377,4 +375,8 @@ insert into Asistencia values
 (37, '2021-02-26', 37, 37),
 (38, '2021-02-26', 38, 38),
 (39, '2021-02-26', 39, 39),
+<<<<<<< HEAD
 (40, '2021-02-26', 40, 40);
+=======
+(40, '2021-02-26', 40, 40);
+>>>>>>> ef70da6e3669cd0972e8beef6d97492e497eaa59
