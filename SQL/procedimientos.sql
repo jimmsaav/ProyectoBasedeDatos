@@ -259,7 +259,6 @@ create procedure consultar_sitio_porHorarioAtencion()
 
 ##Proceso 15: Listar amigos
 drop procedure if exists listar_amigos;
-
 DELIMETER//
 create procedure listar_amigos(in idUsuario int)
 begin
@@ -267,6 +266,22 @@ select idAmistad, idUsuario1, idUsuario2
 from AMISTAD
 where idUsuario1 = 1 || idUsuario2 = 1;
 END//
+
+## Proceso 16: Listar amigos recientes
+drop procedure if exists listar_amigos_recientes;
+DELIMITER //
+create procedure listar_amigos_recientes(in idUsuarioIN int, in apellidoIN varchar(50))
+begin 
+	select IF(a.idUsuario1 = idUsuarioIN, a.idUsuario2, a.idUsuario1) as idUsuariosAmigos from usuario as u, amistad as a where u.apellido like apellidoIN and ((idUsuario1 = idUsuarioIn or idUsuario1 = u.idUsuario ) and (idUsuario2 = idUsuarioIn or idUsuario2 = u.idUsuario));
+end //
+
+## Proceso 17: Buscar amigos por apellido
+drop procedure if exists amigos_apellido;
+DELIMITER //
+create procedure amigos_apellido(in idUsuarioIN int, in apellidoIN varchar(50))
+begin 
+	select IF(a.idUsuario1 = idUsuarioIN, a.idUsuario2, a.idUsuario1) as idUsuariosAmigos from usuario as u, amistad as a where u.apellido like apellidoIN and ((idUsuario1 = idUsuarioIn or idUsuario1 = u.idUsuario ) and (idUsuario2 = idUsuarioIn or idUsuario2 = u.idUsuario));
+end //
 
 ## Proceso 18: Consultar datos del usuario
 drop procedure if exists consultar_datos_usuario;
@@ -292,4 +307,6 @@ begin
     select @idAct := idActividad from Actividad where nombre like nombreActividad;
     select IF(a.idUsuario1 = idUsuarioIN, a.idUsuario2, a.idUsuario1) as compatibles from preferenciasporusuario as pU, amistad as a where pU.idActividad = @idAct and (idUsuario1 = idUsuarioIn or idUsuario2 = idUsuarioIn) and a.estado like 'Aceptado';     
 end //
+
+
 
