@@ -1,7 +1,7 @@
 #1
 drop procedure if exists ingresar_usuario;
 DELIMITER //
-create procedure ingresar_usuario(IN id_usuario_in INT, IN nombre varchar(50), IN apellido varchar(50), IN correo varchar(50), IN edad INT ,
+create procedure ingresar_usuario(IN cedula INT, IN nombre varchar(50), IN apellido varchar(50), IN correo varchar(50), IN edad INT ,
 IN direccion varchar(60), IN ciudad varchar(40), IN moderador INT, IN es_moderador tinyint(1) )
 begin
 DECLARE suma int;
@@ -15,8 +15,8 @@ select us.idUsuario into usuario from USUARIO us where id_usuario_in = us.idUsua
 	) then
     select idUsuario into suma from USUARIO group by idUsuario desc limit 1;
 	set @suma = @suma + 1;
-		INSERT into USUARIO (idUsuario, nombre, apellido, correo, edad, direccion, ciudad, moderador, es_moderador)
-		values (suma, nombre, apellido, correo, edad, direccion, ciudad, moderador, es_moderador);
+		INSERT into USUARIO (idUsuario, cedula, nombre, apellido, correo, edad, direccion, ciudad, moderador, es_moderador)
+		values (suma, cedula, nombre, apellido, correo, edad, direccion, ciudad, moderador, es_moderador);
 		commit;
 		else
 		rollback;
