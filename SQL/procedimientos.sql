@@ -3,54 +3,56 @@ use tliving;
 #1
 drop procedure if exists ingresar_usuario;
 DELIMITER //
-create procedure ingresar_usuario(IN cedula INT, IN nombre varchar(50), IN apellido varchar(50), IN correo varchar(50), IN edad INT ,
-IN direccion varchar(60), IN ciudad varchar(40), IN moderador INT, IN es_moderador tinyint(1) )
+create procedure ingresar_usuario(IN cedula_in INT, IN nombre_in varchar(50), IN apellido_in varchar(50), IN correo_in varchar(50), IN edad_in INT ,
+IN direccion_in varchar(60), IN ciudad_in varchar(40), IN moderador_in INT, IN es_moderador_in tinyint(1) )
 begin
 DECLARE suma int;
-DECLARE usuario int;
-select us.idUsuario into usuario from USUARIO us where id_usuario_in = us.idUsuario;
+DECLARE cedula int;
+select us.cedula into cedula from USUARIO us where cedula_in = us.cedula;
 	START TRANSACTION;
 	IF(
-	(@usuario is null)
+	(cedula is null)
 	AND
-	((select us.edad from USUARIO us where edad = us.edad and edad>=18))
+	((edad_in>=18))
 	) then
-    select idUsuario into suma from USUARIO group by idUsuario desc limit 1;
-	set @suma = @suma + 1;
+    select idUsuario into suma from USUARIO order by idUsuario desc limit 1;
+	set suma = suma + 1;
 		INSERT into USUARIO (idUsuario, cedula, nombre, apellido, correo, edad, direccion, ciudad, moderador, es_moderador)
-		values (suma, cedula, nombre, apellido, correo, edad, direccion, ciudad, moderador, es_moderador);
+		values (suma, cedula_in, nombre_in, apellido_in, correo_in, edad_in, direccion_in, ciudad_in, moderador_in, es_moderador_in);
 		commit;
 		else
 		rollback;
 		END IF;
 
 END //
-DELIMITER;
 
-#2 
+
+## 2 
 drop procedure if exists ingresar_actividad;
+
 DELIMITER //
-create procedure ingresar_actividad(IN nombre varchar(80), IN tipo varchar(50), IN cantidad_participantes INT, IN descripcion varchar(100))
+create procedure ingresar_actividad(IN nombre_IN varchar(80), IN tipo_IN varchar(50), IN cantidad_participantes_IN INT, IN descripcion_IN varchar(100))
 begin
-DECLARE suma INT;
-select idActividad into suma from ACTIVIDAD group by idActividad desc limit 1;
-set @suma = @suma + 1;
+DECLARE suma1 INT;
+select idActividad into suma1 from ACTIVIDAD order by idActividad desc limit 1;
+set suma1 = suma1 + 1;
 INSERT into ACTIVIDAD (idActividad, nombre, tipo, cantidad_participantes, descripcion)
-values (suma, nombre, tipo, cantidad_participantes, descripcion);
+values (suma1, nombre_IN, tipo_IN, cantidad_participantes_IN, descripcion_IN);
 commit;
 		
 END //
+DELIMITER;
 
 #3
 drop procedure if exists añadir_amigo;
 DELIMITER //
 create procedure añadir_amigo(IN idUsuario1_in INT, IN idUsuario2_in INT, IN fecha_envio_amistad_in date, IN estado_in varchar(100))
 begin
-DECLARE suma INT;
-select idAmistad into suma from AMISTAD group by idAmistad desc limit 1;
-set @suma = @suma + 1;
+DECLARE suma1 INT;
+select idAmistad into suma1 from AMISTAD order by idAmistad desc limit 1;
+set suma1 = suma1 + 1;
 INSERT into AMISTAD (idAmistad, idUsuario1, idUsuario2, fecha_envio_amistad, estado)
-values (suma, idUsuario1_in, idUsuario2_in, fecha_envio_amistad_in, estado_in);
+values (suma1, idUsuario1_in, idUsuario2_in, fecha_envio_amistad_in, estado_in);
 		
 END //
 
