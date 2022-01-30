@@ -213,6 +213,14 @@ from AMISTAD
 where idUsuario1 = 1 || idUsuario2 = 1;
 END//
 
+## Proceso 17: Buscar amigos por apellido
+drop procedure if exists amigos_apellido;
+DELIMITER //
+create procedure amigos_apellido(in idUsuarioIN int, in apellidoIN varchar(50))
+begin 
+	select IF(a.idUsuario1 = idUsuarioIN, a.idUsuario2, a.idUsuario1) as idUsuariosAmigos from usuario as u, amistad as a where u.apellido like apellidoIN and ((idUsuario1 = idUsuarioIn or idUsuario1 = u.idUsuario ) and (idUsuario2 = idUsuarioIn or idUsuario2 = u.idUsuario));
+end //
+
 ## Proceso 18: Consultar datos del usuario
 drop procedure if exists consultar_datos_usuario;
 DELIMITER //
