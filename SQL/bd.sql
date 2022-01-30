@@ -5,6 +5,7 @@ create table Usuario (
   idUsuario int not null auto_increment,
   nombre varchar(50) not null,
   apellido varchar(50) not null,
+  correo varchar(50) not null,
   direccion varchar(60) not null,
   ciudad varchar(40) not null,
   moderador integer default NULL,
