@@ -22,6 +22,7 @@ CREATE TABLE MENSAJE (
   contenido varchar(1000) not NULL,
   adjunto json,
   asunto varchar(50) NOT NULL,
+  estado varchar(15) not null,
   idReceptor INT NOT NULL,
   idEmisor INT NOT NULL,
   PRIMARY KEY (idMensaje),
