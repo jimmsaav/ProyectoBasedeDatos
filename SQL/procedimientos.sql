@@ -56,7 +56,16 @@ values (suma1, idUsuario1_in, idUsuario2_in, fecha_envio_amistad_in, estado_in);
 		
 END //
 
+
+
+
+
+
+
+
 ##6
+
+
 
 drop procedure if exists mandar_mensaje;
 
@@ -65,28 +74,28 @@ DELIMETER //
 create procedure mandar_mensaje (in Face int, in Usuario_Agregado INT, in texto_mensaje varchar(1000), in tema varchar(50), in esta varchar(15), in datos_horario datetime)
 
 begin
-DECLARE suma int;
+DECLARE suma int; 
 DECLARE bloqueado int;
 
-select ub.id_bloqueo into bloqueado from USUARIO_BLOQUEADO ub where Face = ub.idUsuarioBloquea and Usuario_Agregado = ub.idUsuarioBloqueadol;
+select ub.id_bloqueo into bloqueado from USUARIO_BLOQUEADO ub where Face = ub.idUsuarioBloquea and Usuario_Agregado = ub.idUsuarioBloqueado;
 
 
 	START TRANSACTION;
 	IF(
-	(@bloqueado is null)
+	(bloqueado is null)
 	AND
 	((select a.estado from amistad a where Face = a.idUsuario1 and Usuario_Agregado = a.idUsuario2) like 'Aceptado')
 
 	) then
 
-		select idMensaje into suma from mensaje group by idMensaje desc limit 1;
-		set @suma = @suma + 1;  
+		select idMensaje into suma from mensaje order by idMensaje desc limit 1; 
+		set suma = suma + 1 ;  
 		insert into mensaje(idMensaje, fecha, contenido, asunto, estado, idReceptor, idEmisor) 
 		values (suma, datos_horario, texto_mensaje, tema, esta, Usuario_Agregado, Face);
 			commit;
 		else
 			rollback;
-		END IF;
+		END IF;  
 
 
 
@@ -94,6 +103,15 @@ select ub.id_bloqueo into bloqueado from USUARIO_BLOQUEADO ub where Face = ub.id
 
 
 END //
+
+DELIMITER;
+
+
+
+
+
+
+
 
 
 ## Proceso numero 7
@@ -113,6 +131,15 @@ select m.asunto, m.contenido from mensaje m where Face = m.idEmisor and Usuario_
 
 
 END //
+
+DELIMITER;
+
+
+
+
+
+
+
 
 ## Proceso 8: Eliminar mensaje
 
@@ -141,6 +168,15 @@ START TRANSACTION;
 
 END //
 
+DELIMITER;
+
+
+
+
+
+
+
+
 
 ## Proceso 9: Consultar todos los mensajes
 
@@ -154,13 +190,22 @@ create procedure consultar_todos_mensaje (in Face int)
 
 begin
 
-select cm.asunto, cm.contenido from mensaje cm where Face = cm.idEmisor;
+select cm.asunto, cm.contenido from mensaje cm where Face = cm.idEmisor
 
 END //
 
+DELIMITER;
+
+
+
+
+
+
+
+
+
 
 ## Proceso 10: Consultar mensajes por estado (ej.. leídos, no leídos, enviado)
-
 
 
 
@@ -175,6 +220,16 @@ begin
 select cm.estado from mensaje ce where Face = ce.idEmisor and Usuario_Agregado = ce.idReceptor and IDmen = ce.idMensaje;
 
 END //
+
+DELIMITER;
+
+
+
+
+
+
+
+
 
 
 ##  Proceso 11: Consultar sitios por usuario
@@ -212,14 +267,6 @@ select idAmistad, idUsuario1, idUsuario2
 from AMISTAD
 where idUsuario1 = 1 || idUsuario2 = 1;
 END//
-
-## Proceso 17: Buscar amigos por apellido
-drop procedure if exists amigos_apellido;
-DELIMITER //
-create procedure amigos_apellido(in idUsuarioIN int, in apellidoIN varchar(50))
-begin 
-	select IF(a.idUsuario1 = idUsuarioIN, a.idUsuario2, a.idUsuario1) as idUsuariosAmigos from usuario as u, amistad as a where u.apellido like apellidoIN and ((idUsuario1 = idUsuarioIn or idUsuario1 = u.idUsuario ) and (idUsuario2 = idUsuarioIn or idUsuario2 = u.idUsuario));
-end //
 
 ## Proceso 18: Consultar datos del usuario
 drop procedure if exists consultar_datos_usuario;
