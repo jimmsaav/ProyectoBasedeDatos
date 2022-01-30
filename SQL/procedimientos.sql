@@ -1,3 +1,46 @@
+#1
+drop procedure if exists ingresar_usuario;
+DELIMITER //
+create procedure ingresar_usuario(IN id_usuario_in INT, IN nombre varchar(50), IN apellido varchar(50), IN correo varchar(50), IN edad INT ,
+IN direccion varchar(60), IN ciudad varchar(40), IN moderador INT, IN es_moderador tinyint(1) )
+begin
+DECLARE suma int;
+DECLARE usuario int;
+select us.idUsuario into usuario from USUARIO us where id_usuario_in = us.idUsuario;
+	START TRANSACTION;
+	IF(
+	(@usuario is null)
+	AND
+	((select us.edad from USUARIO us where edad = us.edad and edad>=18))
+	) then
+    select idUsuario into suma from USUARIO group by idUsuario desc limit 1;
+	set @suma = @suma + 1;
+		INSERT into USUARIO (idUsuario, nombre, apellido, correo, edad, direccion, ciudad, moderador, es_moderador)
+		values (suma, nombre, apellido, correo, edad, direccion, ciudad, moderador, es_moderador);
+		commit;
+		else
+		rollback;
+		END IF;
+
+END //
+DELIMITER;
+
+#2 
+drop procedure if exists ingresar_actividad;
+DELIMITER //
+create procedure ingresar_actividad(IN nombre varchar(80), IN tipo varchar(50), IN cantidad_participantes INT, IN descripcion varchar(100))
+begin
+DECLARE suma INT;
+select idActividad into suma from ACTIVIDAD group by idActividad desc limit 1;
+set @suma = @suma + 1;
+INSERT into ACTIVIDAD (idActividad, nombre, tipo, cantidad_participantes, descripcion)
+values (suma, nombre, tipo, cantidad_participantes, descripcion);
+commit;
+		
+END //
+
+DELIMITER;
+
 
 
 
