@@ -2,8 +2,8 @@
 
 
 DELIMITER $$
-CREATE TRIGGER 'actualizarBloqueado'
-AFTER INSERT ON 'USUARIO_BLOQUEADO' 
+CREATE TRIGGER actualizarBloqueado
+AFTER INSERT ON USUARIO_BLOQUEADO
 FOR EACH ROW
 BEGIN
  	
@@ -23,8 +23,8 @@ DELIMITER ;
 
 
 DELIMITER $$
-CREATE TRIGGER 'actualizarAmigo'
-AFTER INSERT ON 'Amistad' 
+CREATE TRIGGER actualizarAmigo
+AFTER INSERT ON Amistad
 FOR EACH ROW
 BEGIN
  	
@@ -46,8 +46,8 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE TRIGGER 'MensajeError'
-BEFORE INSERT ON 'Sitio' 
+CREATE TRIGGER MensajeError
+BEFORE INSERT ON Sitio
 FOR EACH ROW
 BEGIN
 	IF( (select st.direccion from Sitio st where new.direccion = st.direccion) is not null)
