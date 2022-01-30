@@ -270,9 +270,9 @@ END//
 ## Proceso 16: Listar amigos recientes
 drop procedure if exists listar_amigos_recientes;
 DELIMITER //
-create procedure listar_amigos_recientes(in idUsuarioIN int, in apellidoIN varchar(50))
+create procedure listar_amigos_recientes(in idUsuarioIN int)
 begin 
-	select IF(a.idUsuario1 = idUsuarioIN, a.idUsuario2, a.idUsuario1) as idUsuariosAmigos from usuario as u, amistad as a where u.apellido like apellidoIN and ((idUsuario1 = idUsuarioIn or idUsuario1 = u.idUsuario ) and (idUsuario2 = idUsuarioIn or idUsuario2 = u.idUsuario));
+	select distinct IF(idReceptor = idUsuarioIN, idEmisor, idReceptor) as idAmigosRecientes from mensaje order by fecha DESC; 
 end //
 
 ## Proceso 17: Buscar amigos por apellido
