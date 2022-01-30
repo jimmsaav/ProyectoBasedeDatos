@@ -183,6 +183,42 @@ END //
 DELIMITER;
 
 
+##  Proceso 11: Consultar sitios por usuario
+ drop procedure if exists consultar_sitios_porUsuario;
+DELIMETER//
+create procedure consultar_sitios_porUsuarios(in idUsuario int, in idActividad int, in idSitio int)
+begin
+select s.nombre from Sitio s ;
+END //
+
+##Proceso 12: Consultar sitios por actividad
+drop procedure if exist consultar_sitios_porActividad;
+DELIMETER//
+create procedure consultar_sitio_porActividad(in idActividad, in idSitio int)
+begin
+
+select s.nombre from Sitio s;
+
+##Proceso 13: Consultar sitios por direccion
+drop procedure if exist consultar_sitio_porDireccion
+
+##Proceso 14: Consultar sitios por horario de atencion
+
+drop procedure if exist consultar_sitio_porHorarioAtencion;
+DELIMETER//
+create procedure consultar_sitio_porHorarioAtencion()
+
+##Proceso 15: Listar amigos
+drop procedure if exist listar_amigos;
+
+DELIMETER//
+create procedure listar_amigos(in idUsuario)
+begin
+select idAmistad, idUsuario1, idUsuario2
+from AMISTAD
+where idUsuario1 = 1 || idUsuario2 = 1;
+END//
+
 ## Proceso 20: Consultar mensajes por estado (ej.. leídos, no leídos, enviado)
 
 drop procedure if exists encontrar_compatibilidad;
