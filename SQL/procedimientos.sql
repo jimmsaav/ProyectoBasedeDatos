@@ -234,28 +234,33 @@ select s.nombre from Sitio s ;
 END //
 
 ##Proceso 12: Consultar sitios por actividad
-drop procedure if exists consultar_sitios_porActividad;
+drop procedure if exist consultar_sitios_porActividad;
 DELIMETER//
-create procedure consultar_sitio_porActividad(in idActividad int, in idSitio int)
+create procedure consultar_sitio_porActividad(in idActividad, in idSitio int)
 begin
 
 select s.nombre from Sitio s;
+
 END //
+
 ##Proceso 13: Consultar sitios por direccion
-drop procedure if exists consultar_sitio_porDireccion;
+drop procedure if exist consultar_sitio_porDireccion
 DELIMETER//
-Create procedure consultar_sitio_porDireccion(in idActividad int, in Sitio int)
+Create procedure consultar_sitio_porDireccion(in direccion varchar)
 begin
 
-selec s.nombre from Sitio.s where 
-END //
+selec s.nombre from sitio as si where si.direccion = direccion in ;
+
+END//
 ##Proceso 14: Consultar sitios por horario de atencion
 
 drop procedure if exist consultar_sitio_porHorarioAtencion;
 DELIMETER//
-create procedure consultar_sitio_porHorarioAtencion()
+create procedure consultar_sitio_porHorarioAtencion(in idListaHorarioAtencion)
 begin 
 select s.nombre from sitio as si, actividad as ac where si.idListaHorarioAtencion = idListaHorarioAtencion in;
+
+END//
 
 ##Proceso 15: Listar amigos
 drop procedure if exist listar_amigos;
