@@ -213,6 +213,14 @@ from AMISTAD
 where idUsuario1 = 1 || idUsuario2 = 1;
 END//
 
+## Proceso 18: Consultar datos del usuario
+drop procedure if exists consultar_datos_usuario;
+DELIMITER //
+create procedure consultar_datos_usuario(in idUsuarioIN int)
+begin 
+	select * from usuario where idUsuario = idUsuarioIN;
+end //
+
 ## Proceso 19: Consultar lista de actividades del usuario
 drop procedure if exists actividades_usuario;
 DELIMITER //
