@@ -41,6 +41,19 @@ commit;
 		
 END //
 
+#3
+drop procedure if exists añadir_amigo;
+DELIMITER //
+create procedure añadir_amigo(IN idUsuario1_in INT, IN idUsuario2_in INT, IN fecha_envio_amistad_in date, IN estado_in varchar(100))
+begin
+DECLARE suma INT;
+select idAmistad into suma from AMISTAD group by idAmistad desc limit 1;
+set @suma = @suma + 1;
+INSERT into AMISTAD (idAmistad, idUsuario1, idUsuario2, fecha_envio_amistad, estado)
+values (suma, idUsuario1_in, idUsuario2_in, fecha_envio_amistad_in, estado_in);
+		
+END //
+
 ##6
 
 drop procedure if exists mandar_mensaje;
