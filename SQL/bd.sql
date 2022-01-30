@@ -3,8 +3,11 @@ CREATE SCHEMA tliving;
 USE tliving;
 create table Usuario (
   idUsuario int not null auto_increment,
+  cedula int not null,
   nombre varchar(50) not null,
   apellido varchar(50) not null,
+  correo varchar(50) not null,
+  edad int not null,
   direccion varchar(60) not null,
   ciudad varchar(40) not null,
   moderador integer default NULL,
@@ -17,8 +20,8 @@ CREATE TABLE MENSAJE (
   idMensaje INT not NULL auto_increment,
   fecha datetime not NULL,
   contenido varchar(1000) not NULL,
-  adjunto json,
   asunto varchar(50) NOT NULL,
+  estado varchar(15) not null,
   idReceptor INT NOT NULL,
   idEmisor INT NOT NULL,
   PRIMARY KEY (idMensaje),
