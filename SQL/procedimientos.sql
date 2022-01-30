@@ -63,10 +63,10 @@ DELIMETER //
 create procedure mandar_mensaje (in Face int, in Usuario_Agregado INT, in texto_mensaje varchar(1000), in tema varchar(50), in esta varchar(15), in datos_horario datetime)
 
 begin
-DECLARE suma int; 
+DECLARE suma int;
 DECLARE bloqueado int;
 
-select ub.id_bloqueo into bloqueado from USUARIO_BLOQUEADO ub where Face = ub.idUsuarioBloquea and Usuario_Agregado = ub.idUsuarioBloqueado;
+select ub.id_bloqueo into bloqueado from USUARIO_BLOQUEADO ub where Face = ub.idUsuarioBloquea and Usuario_Agregado = ub.idUsuarioBloqueadol;
 
 
 	START TRANSACTION;
@@ -77,14 +77,14 @@ select ub.id_bloqueo into bloqueado from USUARIO_BLOQUEADO ub where Face = ub.id
 
 	) then
 
-		select idMensaje into suma from mensaje group by idMensaje desc limit 1; 
-		set @suma = @suma + 1 ;  
+		select idMensaje into suma from mensaje group by idMensaje desc limit 1;
+		set @suma = @suma + 1;  
 		insert into mensaje(idMensaje, fecha, contenido, asunto, estado, idReceptor, idEmisor) 
 		values (suma, datos_horario, texto_mensaje, tema, esta, Usuario_Agregado, Face);
 			commit;
 		else
 			rollback;
-		END IF;  
+		END IF;
 
 
 
@@ -180,19 +180,16 @@ select cm.estado from mensaje ce where Face = ce.idEmisor and Usuario_Agregado =
 
 END //
 
-DELIMITER;
+DELIMITER,
 
 
-## Proceso 20: Consultar mensajes por estado (ej.. leídos, no leídos, enviado)
-
+## Proceso 20: Consultar compatibilidad de actividades (dada una actividad, mostrar todos los usuarios amigos que son compatibles)
 drop procedure if exists encontrar_compatibilidad;
 
 DELIMITER //
 create procedure encontrar_compatibilidad(in idUsuarioIN int, in nombreActividad varchar(100))
 begin 
     select @idAct := idActividad from Actividad where nombre like nombreActividad;
-    
-    select * from preferenciasporusuario where idActividad = @idAct;    
-    
+    select IF(a.idUsuario1 = idUsuarioIN, a.idUsuario2, a.idUsuario1) as compatibles from preferenciasporusuario as pU, amistad as a where pU.idActividad = @idAct and (idUsuario1 = idUsuarioIn or idUsuario2 = idUsuarioIn) and a.estado like 'Aceptado';     
 end //
 
