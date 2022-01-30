@@ -3,6 +3,7 @@ CREATE SCHEMA tliving;
 USE tliving;
 create table Usuario (
   idUsuario int not null auto_increment,
+  cedula int not null,
   nombre varchar(50) not null,
   apellido varchar(50) not null,
   correo varchar(50) not null,
