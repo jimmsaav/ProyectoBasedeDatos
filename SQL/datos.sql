@@ -1,10 +1,11 @@
 use Tliving;
 
-insert into Usuario values (1, 0900000001, 'Pedro', 'Zambrano', '1@correo.com', 35, 'Alborada', 'Guayaquil', NULL, true),
-(2, 0900000002, 'Juan', 'Hidalgo', '2@correo.com', 34 , 'Ciudad del rio', 'Guayaquil', 1, false),
-(3, 0900000003, 'Carlos', 'Lopez', '3@correo.com',   50, 'Mucho lote', 'Guayaquil', 1, false),
-(4, 0900000004, 'Francisco', 'Sven', '4@correo.com', 51 , 'La Joya', 'Guayaquil', 1, false),
-(5, 0900000005, 'Luis', 'Jimenez', '5@correo.com', 52, 'Metropolis', 'Guayaquil', 1, false),
+insert into Usuario values 
+ (1, 0900000001, 'Pedro', 'Zambrano', '1@correo.com', 35, 'Alborada', 'Guayaquil', NULL, true),
+ (2, 0900000002, 'Juan', 'Hidalgo', '2@correo.com', 34 , 'Ciudad del rio', 'Guayaquil', 1, false),
+ (3, 0900000003, 'Carlos', 'Lopez', '3@correo.com',   50, 'Mucho lote', 'Guayaquil', 1, false),
+ (4, 0900000004, 'Francisco', 'Sven', '4@correo.com', 51 , 'La Joya', 'Guayaquil', 1, false),
+ (5, 0900000005, 'Luis', 'Jimenez', '5@correo.com', 52, 'Metropolis', 'Guayaquil', 1, false),
  (6, 0900000006, 'Elbert', 'Yturralde', '6@correo.com',  50, 'Vista al Rio', 'Cuenca', NULL, false),
  (7, 0900000007, 'Pedro', 'Lopez', '7@correo.com', 15, 'Los Sigsales', 'Cuenca', 6, false),
  (8, 0900000008, 'Jaime', 'Morales', '8@correo.com', 19, 'San Blas', 'Cuenca', 6, false),
@@ -84,7 +85,8 @@ INSERT INTO MENSAJE VALUES
 (39, '2021-05-06 15:05:25', 'Me parece un sitio super bonito', 'RE: Visita Zoologico', 'Leído', 4, 10),
 (40, '2021-05-06 15:05:30', 'Claro, espero poder ir lo mas pronto posible.', 'RE: Visita a Zoologico', 'Leído', 10, 4);
 
-insert into Amistad values (1, 1, 2, '2021-04-03', 'Enviado' ),
+insert into Amistad values 
+(1, 1, 2, '2021-04-03', 'Enviado' ),
 (2, 1, 3, '2021-04-03', 'Enviado' ),
 (3, 1, 21, '2021-04-03', 'Aceptado' ),
 (4, 3, 2, '2021-04-03', 'Aceptado' ),
@@ -375,4 +377,4 @@ insert into Asistencia values
 (37, '2021-02-26', 37, 37),
 (38, '2021-02-26', 38, 38),
 (39, '2021-02-26', 39, 39),
-(40, '2021-02-26', 40, 40),;
+(40, '2021-02-26', 40, 40);
