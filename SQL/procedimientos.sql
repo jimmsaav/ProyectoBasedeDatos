@@ -58,6 +58,27 @@ END //
 
 
 
+##5
+drop procedure if exists añadir_sitio;
+DELIMITER //
+create procedure añadir_sitio(IN nombre_in varchar(100), IN direccion_in varchar(100), IN numero_contacto_in varchar(100), IN sala_virtual_in tinyint(1), IN idActividad_in INT, IN link_in varchar(500), IN plataforma_in varchar(100))
+begin
+declare suma2 int;
+declare dir varchar(100);
+select si.direccion into dir from SITIO si where direccion_in = si.direccion;
+	START TRANSACTION;
+    IF(dir is null)
+    then
+    select idSitio into suma2 from SITIO order by idSitio desc limit 1;
+    set suma2 = suma2 + 1;
+    insert into SITIO(idSitio, nombre, direccion, numero_contacto, sala_virtual, idActividad, link, plataforma)
+    values (suma2, nombre_in, direccion_in, numero_contacto_in, sala_virtual_in, idActividad_in, link_in, plataforma_in);
+		commit;
+	else
+		rollback;
+	END if;
+
+END //
 
 
 
