@@ -11,4 +11,4 @@ create view usuariosPorCiudad as
 
 drop view if exists usuariosPorModerador;
 create view usuariosPorModerador as 
-	select idUsuario, count(*) from usuario where es_moderador = 1 group by idUsuario;
+	select moderador, count(*) - (select count(*) from usuario where es_moderador = 1) as cantidadUsuarios from usuario group by moderador;
