@@ -1,3 +1,4 @@
+use tliving;
 ##TRIGGER numero 1 ... Cambiar amigo a bloqueado y actualizar tabla Amistad
 
 
