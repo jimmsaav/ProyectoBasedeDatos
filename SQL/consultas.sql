@@ -1,4 +1,4 @@
-use tliving,
+use tliving;
 /*Parte 1*/
 select * from actividad
 where idActividad = 1,
