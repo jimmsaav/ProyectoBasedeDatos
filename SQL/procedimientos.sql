@@ -85,30 +85,19 @@ END //
 
 
 ##6
-
-
-
 drop procedure if exists mandar_mensaje;
-
 DELIMETER //
-
 create procedure mandar_mensaje (in Face int, in Usuario_Agregado INT, in texto_mensaje varchar(1000), in tema varchar(50), in esta varchar(15), in datos_horario datetime)
-
 begin
 DECLARE suma int; 
 DECLARE bloqueado int;
-
 select ub.id_bloqueo into bloqueado from USUARIO_BLOQUEADO ub where Face = ub.idUsuarioBloquea and Usuario_Agregado = ub.idUsuarioBloqueado;
-
-
 	START TRANSACTION;
 	IF(
 	(bloqueado is null)
 	AND
 	((select a.estado from amistad a where Face = a.idUsuario1 and Usuario_Agregado = a.idUsuario2) like 'Aceptado')
-
 	) then
-
 		select idMensaje into suma from mensaje order by idMensaje desc limit 1; 
 		set suma = suma + 1 ;  
 		insert into mensaje(idMensaje, fecha, contenido, asunto, estado, idReceptor, idEmisor) 
@@ -117,193 +106,89 @@ select ub.id_bloqueo into bloqueado from USUARIO_BLOQUEADO ub where Face = ub.id
 		else
 			rollback;
 		END IF;  
-
-
-
-
-
-
 END //
-
-DELIMITER;
-
-
-
-
-
-
-
-
 
 ## Proceso numero 7
-
-
 drop procedure if exists consultar_mensaje;
-
 DELIMETER //
-
 create procedure consultar_mensaje (in Face int, in Usuario_Agregado INT)
-
 begin
-
-
 select m.asunto, m.contenido from mensaje m where Face = m.idEmisor and Usuario_Agregado = m.idReceptor;
-
-
-
 END //
 
-DELIMITER;
-
-
-
-
-
-
-
-
 ## Proceso 8: Eliminar mensaje
-
-
-
 drop procedure if exists eliminar_mensaje;
-
 DELIMETER //
-
 create procedure eliminar_mensaje (in id int)
-
 begin
-
 START TRANSACTION;
 	IF(
 	((select m.idMensaje from mensaje m where id = m.idMensaje ) is not null)
-
 	) then
 		delete from mensaje me where id = me.idMensaje;
 			commit;
-			
 		else
 			rollback;
 		END IF;  
-
-
 END //
-
-DELIMITER;
-
-
-
-
-
-
-
-
 
 ## Proceso 9: Consultar todos los mensajes
-
-
-
 drop procedure if exists consultar_todos_mensaje;
-
 DELIMETER //
-
 create procedure consultar_todos_mensaje (in Face int)
-
 begin
-
-select cm.asunto, cm.contenido from mensaje cm where Face = cm.idEmisor
-
+	select cm.asunto, cm.contenido from mensaje cm where Face = cm.idEmisor;
 END //
-
-DELIMITER;
-
-
-
-
-
-
-
-
-
 
 ## Proceso 10: Consultar mensajes por estado (ej.. leídos, no leídos, enviado)
-
-
-
 drop procedure if exists consultar_estado_mensaje;
-
 DELIMETER //
-
 create procedure consultar_estado_mensaje (in Face int, in Usuario_Agregado int, in IDmen int)
-
 begin
-
-select cm.estado from mensaje ce where Face = ce.idEmisor and Usuario_Agregado = ce.idReceptor and IDmen = ce.idMensaje;
-
+	select cm.estado from mensaje ce where Face = ce.idEmisor and Usuario_Agregado = ce.idReceptor and IDmen = ce.idMensaje;
 END //
-
-DELIMITER;
-
-
 
 ##  Proceso 11: Consultar sitios por usuario
- drop procedure if exists consultar_sitios_porUsuario;
-DELIMETER//
-create procedure consultar_sitios_porUsuarios(in idUsuario int, in idActividad int, in idSitio int)
+drop procedure if exists consultar_sitios_porUsuario;
+DELIMETER //
+create procedure consultar_sitios_porUsuarios(in idUsuario int)
 begin
-select s.nombre from Sitio s ;
+	select idSitio from sitios where idActividad in (select idActividad from preferenciasporusuario where idUsuario = idUsuario);
 END //
-DELIMITER;
 
 ##Proceso 12: Consultar sitios por actividad
-drop procedure if exist consultar_sitios_porActividad;
-DELIMETER//
-create procedure consultar_sitio_porActividad(in idActividad, in idSitio int)
+drop procedure if exists consultar_sitios_porActividad;
+DELIMETER //
+create procedure consultar_sitio_porActividad(in idActividad int)
 begin
-
-select s.nombre from Sitio s;
-
+	select idSitio from Sitio where idSitio = idActividad;
 END //
-DELIMITER;
 
 
 ##Proceso 13: Consultar sitios por direccion
-drop procedure if exist consultar_sitio_porDireccion
-DELIMETER//
-Create procedure consultar_sitio_porDireccion(in direccion varchar)
+drop procedure if exists consultar_sitio_porDireccion;
+DELIMETER //
+create procedure consultar_sitio_porDireccion(in direccionIN varchar(100))
 begin
-
-selec s.nombre from sitio as si where si.direccion = direccion in ;
-
+	select idSitio from sitio where direccion like direccionIN;
 END//
-DELIMITER;
-
-
 
 ##Proceso 14: Consultar sitios por horario de atencion
-
-drop procedure if exist consultar_sitio_porHorarioAtencion;
-DELIMETER//
-create procedure consultar_sitio_porHorarioAtencion(in idListaHorarioAtencion)
+drop procedure if exists consultar_sitio_porHorarioAtencion;
+DELIMETER //
+create procedure consultar_sitio_porHorarioAtencion(in horaAperturaIN date, in horaCierreIN date)
 begin 
-select s.nombre from sitio as si, actividad as ac where si.idListaHorarioAtencion = idListaHorarioAtencion in;
-
+	select idSitio from listahorarioatencion where idListaHorarioAtencion in(select idListaHorarioAtencion from horarioatencion where horaApertura >= horaAperturaIN and horaCierre <= horaCierreIN);
 END//
-DELIMITER;
 
 
 ##Proceso 15: Listar amigos
-drop procedure if exist listar_amigos;
-
-DELIMETER//
-create procedure listar_amigos(in idUsuario)
+drop procedure if exists listar_amigos;
+DELIMETER //
+create procedure listar_amigos(in idUsuario int)
 begin
-select idAmistad, idUsuario1, idUsuario2
-from AMISTAD
-where idUsuario1 = 1 || idUsuario2 = 1;
-END//
-DELIMITER;
-
+	select idAmistad, idUsuario1, idUsuario2 from AMISTAD where idUsuario1 = 1 || idUsuario2 = 1;
+END //
 
 
 ## Proceso 16: Listar amigos recientes
@@ -351,8 +236,3 @@ begin
     select @idAct := idActividad from Actividad where nombre like nombreActividad;
     select IF(a.idUsuario1 = idUsuarioIN, a.idUsuario2, a.idUsuario1) as compatibles from preferenciasporusuario as pU, amistad as a where pU.idActividad = @idAct and (idUsuario1 = idUsuarioIn or idUsuario2 = idUsuarioIn) and a.estado like 'Aceptado';     
 end //
-
-DELIMITER;
-
-
-
