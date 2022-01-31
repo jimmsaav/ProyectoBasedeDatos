@@ -1,7 +1,7 @@
 # ProyectoBasedeDatos
 
 ## Documento en word
--[documentación_G1.docx](https://github.com/jimmsaav/ProyectoBasedeDatos/blob/main/SQL/documentaci%C3%B3n_G1.docx)
+- [documentación_G1.docx](https://github.com/jimmsaav/ProyectoBasedeDatos/blob/main/SQL/documentaci%C3%B3n_G1.docx)
 
 ## Archivos SQL
 - [bd.sql](https://github.com/jimmsaav/ProyectoBasedeDatos/blob/main/SQL/bd.sql)
