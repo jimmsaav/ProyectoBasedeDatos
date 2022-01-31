@@ -196,7 +196,7 @@ drop procedure if exists listar_amigos_recientes;
 DELIMITER //
 create procedure listar_amigos_recientes(in idUsuarioIN int)
 begin 
-	select distinct IF(idReceptor = idUsuarioIN, idEmisor, idReceptor) as idAmigosRecientes from mensaje order by fecha DESC; 
+	select distinct IF(idUsuario1 = idUsuarioIN, idUsuario2, idUsuario1) as idAmigosRecientes from amistad where (idUsuario1 = idUsuarioIN or idUsuario2 = idUsuarioIN) and estado like 'Aceptado' order by fecha_envio_amistad DESC; 
 end //
 DELIMITER;
 
