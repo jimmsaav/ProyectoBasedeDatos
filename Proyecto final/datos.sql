@@ -21,7 +21,7 @@ insert into Usuario values
  (18, 0900000018, 'Luisa', 'Lopez', '18@correo.com', 50, 'Jardines de la Sierra', 'Cuenca', 6, false),
  (19, 0900000019, 'Isabela', 'Castro', '21@correo.com', 50, 'Los Sigsales', 'Cuenca', 6, false),
  (20, 0900000020, 'Kiara', 'Montero', '22@correo.com', 50, 'San Blas', 'Cuenca', 6, false),
- (21, 0900000021, 'Aymee', 'Sarmient', '23@correo.com', 50, 'Sauces 2', 'Guayaquil', NULL, true),
+ (21, 0900000021, 'Aymee', 'Sarmient', '23@correo.com', 50, 'Sauces 2', 'Guayaquil', 1, true),
  (22, 0900000022, 'Jimmy', 'Saavedra', '24@correo.com', 50, 'Centro', 'Guayaquil', 1, false),
  (23, 0900000023, 'Andrea', 'Loor', '25@correo.com', 50, '1ero de Mayo', 'Portoviejo', 1, false),
  (24, 0900000024, 'Michell', 'Cardenas', '26@correo.com', 58, 'Alcedo y Carchi', 'Guayaquil', 1, false),
