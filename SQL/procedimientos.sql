@@ -185,9 +185,9 @@ END//
 ##Proceso 15: Listar amigos
 drop procedure if exists listar_amigos;
 DELIMETER //
-create procedure listar_amigos(in idUsuario int)
+create procedure listar_amigos(in idUsuarioIN int)
 begin
-	select idAmistad, idUsuario1, idUsuario2 from AMISTAD where idUsuario1 = 1 || idUsuario2 = 1;
+	select IF(idUsuario1 = idUsuarioIN, idUsuario2, idUsuario1) as idUsuariosAmigos from AMISTAD where idUsuario1 = idUsuarioIN or idUsuario2 = idUsuarioIN;
 END //
 
 
